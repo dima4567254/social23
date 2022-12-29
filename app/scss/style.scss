@@ -101,6 +101,7 @@ body {
         // margin-left: 8%;
         // margin-top: 8%;
         max-width: 350px;
+        z-index: 999;
     }
 
     &__title {
@@ -624,9 +625,25 @@ body {
 
     // width: 100vh;
     // min-height: 624px;
+    position: relative;
+    background-image: url('../images/besocial_illustratio.svg');
+    background-repeat: no-repeat;
+    background-position: -45px 0;
+
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     height: 1px;
+    //     width: 1px;
+      
+    // }
+
     &__inner {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
+        
     }
 
     &__img {
@@ -638,6 +655,7 @@ body {
     &__box {
         background-color: $silver;
         padding: 60px;
+        width: 50%;
     }
 
     &__title {
@@ -659,7 +677,7 @@ body {
     &__label {
         display: block;
         color: $black2;
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
     }
 
     &__input {
@@ -671,10 +689,11 @@ body {
         margin-bottom: 20px;
         background-color: transparent;
         outline: none;
-        padding-bottom: 20px;
+
+        padding: 20px 0px;
 
         &--tel {
-            padding-left: 85px;
+            padding-left: 90px;
         }
     }
 
@@ -805,6 +824,194 @@ body {
         padding: 10px;
         max-width: 130px
     }
+}
+
+// -------------------------------------------------------------------------
+option {
+    padding-left: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+option:active {
+    background-color: red;
+}
+
+
+option:hover {
+    background-color: #EDF4FF;
+}
+
+
+
+
+
+// position: relative;
+//     margin-left: 6px;
+//     border-style: solid;
+//     border-width: 5px 4px 0;
+//     border-color: #9a9a9a transparent transparent;
+
+li .zero {
+    min-height: 8px;
+    max-height: 8px;
+    transition: color 0.5s;
+
+    &:hover {
+        background-color: transparent;
+    }
+}
+
+.icon-ok {
+    &::before {
+        background: url('../images/3.svg') no-repeat;
+    }
+}
+
+.icon-error {
+    &::before {
+        background: url('../images/3.svg') no-repeat;
+    }
+}
+
+.icon-ok,
+.icon-error {
+    position: relative;
+    z-index: 999;
+    height: 61px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 21px;
+        left: 0px;
+        height: 13px;
+        width: 18px;
+
+        background-size: cover;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        border-style: solid;
+        border-width: 5px 4px 0;
+        border-color: #9a9a9a transparent transparent;
+    }
+}
+
+// .jq-selectbox__select {
+//     height: 60px;
+//     // width: 125px;
+//     background-color: transparent;
+//     display: flex;
+// }
+
+.jq-selectbox__select {
+    height: 61px;
+    display: block;
+    // padding: 20px 0px 20px 0px;
+    width: 125px;
+    // background-color: red !important;
+    // background: linear-gradient(rgb(126, 47, 47), #721616);
+    background: transparent;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    // padding-left: 11px;
+    outline: none;
+    display: flex;
+}
+
+.jq-selectbox__select:hover {
+    background: transparent;
+
+}
+
+.jq-selectbox__select-text {
+    margin-left: 45px;
+    margin-top: 18px;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+
+    color: #000000;
+    // cursor: pointer;
+    // overflow: inherit;
+    // width: 26px!important;
+}
+
+
+
+.jq-selectbox__trigger {
+    border: none;
+    top: -17px;
+    left: 27px;
+}
+
+.jq-selectbox__trigger-arrow {
+    top: 26px;
+    border-top: 5px solid #2E3A59;
+}
+
+.active {
+    background-image: url('../images/caret_down.svg');
+    background-position: right;
+    background-size: auto;
+    // background-size: cover;
+    // border-top: 5px solid red;
+    // background-color: red;
+}
+
+.jq-selectbox li.selected {
+    background-color: transparent;
+    color: #000000;
+}
+
+.jq-selectbox ul {
+    background-color: white;
+    border: 1px solid silver;
+}
+
+.jq-selectbox li {
+    // background-color: #A3ABB1;
+    // color: #FFF;
+    // height: 40px;
+    text-align: center;
+    border: 1px solid red;
+    padding: 15px 0px 15px 0px;
+    line-height: 2;
+    padding-left: 35px;
+    width: 125px;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-weight: 700;
+    // line-height: 21px;
+    letter-spacing: 0em;
+    // padding: 5px 17px 6px;
+    // background-position: 13px 50%;
+
+
+    &:hover {
+        background-color: #EDF4FF;
+        color: #000;
+    }
+}
+
+.jq-selectbox__dropdown {
+    top: 42px;
+}
+
+.sel {
+    background-image: url('../images/caret_down.svg');
+    background-position: 90% 50%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    color: #000;
 }
 
 @import 'media';

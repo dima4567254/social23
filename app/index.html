@@ -61,26 +61,35 @@
                     <span class="sr-only">open menu</span>
                 </button>
             </nav>
-            <div class="intro__box">
+            <!-- <div class="intro__box">
                 <h2 class="intro__title">
                     Общайся, развивайся, зарабатывай!
                 </h2>
                 <a class="intro__link link" href="#">
                     Хочу в команду
                 </a>
-            </div>
+            </div> -->
             <!-- переименовать -->
         </div>
     </header>
 
     <main class="main">
         <div class="intro">
-            <!-- <div class="container"> -->
+            <div class="container">
+                <div class="intro__box">
+                    <h2 class="intro__title">
+                        Общайся, развивайся, зарабатывай!
+                    </h2>
+                    <a class="intro__link link" href="#">
+                        Хочу в команду
+                    </a>
+                </div>
 
-            <!-- <img class="intro__img" src="images/icons/cats.svg" alt="logo"> -->
+
+                <!-- <img class="intro__img" src="images/icons/cats.svg" alt="logo"> -->
 
 
-            <!-- </div> -->
+            </div>
         </div>
 
         <section class="about">
@@ -467,7 +476,7 @@
 
         <section class="contacts">
             <div class="contacts__inner">
-                <img class="contacts__img" src="images/besocial_illustratio.svg" alt="занятые коты">
+                <!-- <img class="contacts__img" src="images/besocial_illustratio.svg" alt="занятые коты"> -->
                 <div class="contacts__box">
                     <h2 class="contacts__title">
                         Хочешь зарабатывать от 600$
@@ -489,17 +498,18 @@
 
                         <div class="form__inner">
                             <div class="form__box">
-                                <div class="dropdown">
-                                    <select class="dropdown__select">
-                                        <option class="dropdown__optoon dropdown-svg" value="1" name="email">1
-                                        </option>
-                                        <option class="dropdown__optoon" value="0" name="email">2</option>
-                                    </select>
-                                </div>
-                                <span>+380</span>
+                                <select class="filter-selects__sort">
+                                    <option value="1" class="icon-ok">
+                                        +380
+                                    </option>
+                                    <option value="2" class="icon-error">
+                                        +381
+                                    </option>
+                                </select>
+                                <!-- <span>+380</span> -->
                             </div>
-                            <input class="form__input form__input--tel" id="tel-input" type="tel" name="tel" placeholder="(99)00000000"
-                                required>
+                            <input class="form__input form__input--tel" id="tel-input" type="tel" name="tel"
+                                placeholder="(99)00000000" required>
                         </div>
                         <label class="form__label" for="tel-input">
                             Твой e-mail
@@ -571,6 +581,10 @@
             </div>
         </div>
     </footer>
+
+    <!-- <form class="form"> -->
+
+    <!-- </form> -->
 
     <script src="js/main.min.js"></script>
 </body>

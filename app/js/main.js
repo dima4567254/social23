@@ -1,25 +1,44 @@
 $(function name(params) {
 
     $(document).ready(function () {
-        $('input,textarea').focus(function(){
-          $(this).data('placeholder',$(this).attr('placeholder'))
-          $(this).attr('placeholder','');
+        $('input,textarea').focus(function () {
+            $(this).data('placeholder', $(this).attr('placeholder'))
+            $(this).attr('placeholder', '');
         });
-        $('input,textarea').blur(function(){
-          $(this).attr('placeholder',$(this).data('placeholder'));
+        $('input,textarea').blur(function () {
+            $(this).attr('placeholder', $(this).data('placeholder'));
         });
-        });
+    });
 
+
+    (function () {
+        if (typeof WebFont != 'undefined') {
+            WebFontConfig = {
+                custom: {
+                    families: ['Montserrat']
+                },
+                active: function () {
+                    $('select, :checkbox, :radio').trigger('refresh');
+                }
+            };
+            WebFont.load(WebFontConfig);
+        }
+    })();
+
+// проверить нужно ли
+    setTimeout(function () {
+        $('select,filter-selects__sort').styler();
+    }, 100)
 
 
     /*	$(".menu a").on("click", function (event) {
-    	    event.preventDefault();
-    	    var id = $(this).attr('href'),
-    	        top = $(id).offset().top;
-    	    $('body,html').animate({
-    	        scrollTop: top
-    	    }, 1500);
-    	});
+            event.preventDefault();
+            var id = $(this).attr('href'),
+                top = $(id).offset().top;
+            $('body,html').animate({
+                scrollTop: top
+            }, 1500);
+        });
 
         /*для закрыть меню*/
     /*
