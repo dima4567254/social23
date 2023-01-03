@@ -21,7 +21,7 @@ $(function name(params) {
     // });
 
 
-   
+
 
     // $('.modal__button').on('click', function () {
     //     $('modal').toggleClass('close');
@@ -30,7 +30,7 @@ $(function name(params) {
     //     $('.intro__btn').toggleClass('menu__list--active');*/
     // });
 
-    
+
 
 
     (function () {
@@ -105,20 +105,49 @@ $(function name(params) {
 
 });
 
-//  /*открывать форму*/
-//  const modalWindow = document.querySelector('.modal');
-//  const buttonModal = document.querySelector('.price__button--operator, price__button--scout');
- 
-//  /*addEventListenerпрослушиватель событий по нажатию левой кнопкой мышы*/
-//  buttonModal.addEventListener('click', () => {
-//      modalWindow.classList.add('active-modal'); /*добовляем класс*/
-//  });
+/*открывать форму*/
+const modalWindow = document.querySelector('.modal');
+const modalWindow2 = document.querySelector('.modal--scout');
+const modalWindow3 = document.querySelector('.modal--leader');
 
-//  /*закрытие окна*/ 
-//  modalWindow.addEventListener('click', (e) => {
-//      const isModal = e.target.closest('.modal__inner'); /*если клик в любое место кроме .modal__inner то окно закрывается */ 
-//      if (!isModal) {
-//          modalWindow.classList.remove('active-modal');
-//      }
-//      /*добовляем класс*/
-//  });
+const buttonModal = document.querySelector('.price__button--operator');
+const buttonModal2 = document.querySelector('.price__button--scout');
+const buttonModal3 = document.querySelector('.price__button--leader');
+
+/*addEventListenerпрослушиватель событий по нажатию левой кнопкой мышы*/
+buttonModal.addEventListener('click', () => {
+    modalWindow.classList.add('active-modal'); /*добовляем класс*/
+});
+
+buttonModal2.addEventListener('click', () => {
+    modalWindow2.classList.add('active-modal'); /*добовляем класс*/
+});
+
+buttonModal3.addEventListener('click', () => {
+    modalWindow3.classList.add('active-modal'); /*добовляем класс*/
+});
+
+/*закрытие окна*/
+modalWindow.addEventListener('click', (e) => {
+    const isModal = e.target.closest('.modal__inner'); /*если клик в любое место кроме .modal__inner то окно закрывается */
+    if (!isModal) {
+        modalWindow.classList.remove('active-modal');
+    }
+    /*добовляем класс*/
+});
+
+modalWindow2.addEventListener('click', (e) => {
+    const isModal = e.target.closest('.modal__inner'); /*если клик в любое место кроме .modal__inner то окно закрывается */
+    if (!isModal) {
+        modalWindow2.classList.remove('active-modal');
+    }
+    /*добовляем класс*/
+});
+
+modalWindow3.addEventListener('click', (e) => {
+    const isModal = e.target.closest('.modal__inner'); /*если клик в любое место кроме .modal__inner то окно закрывается */
+    if (!isModal) {
+        modalWindow3.classList.remove('active-modal');
+    }
+    /*добовляем класс*/
+});

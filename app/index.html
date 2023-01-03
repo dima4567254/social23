@@ -367,7 +367,7 @@
                 </ul>
             </div>
         </section>
-
+        <!-- проверить потом не натупил ли с h3 h2 -->
         <section class="price" id="price">
             <div class="container">
                 <h2 class="price__title title">
@@ -464,6 +464,7 @@
                                 </div>
                             </div>
                         </form>
+
                     </li>
                     <li class="price__item">
                         <!-- <a class="price__link price__link--scout" href="#"> -->
@@ -495,6 +496,68 @@
                                 </p>
                             </div>
                         </button>
+                        <form class="modal modal--scout">
+                            <div class="modal__inner">
+                                <!-- <button class="modal__button" type="button">
+                                    <span></span>
+                                    <span class="sr-only">open menu</span>
+                                </button> -->
+                                <img class="modal__images" src="images/scout-c.svg" alt="Оператор">
+                                <div class="modal__box">
+                                    <h3 class="modal__subtitle">модельный скаут</h3>
+                                    <div class="modal__text">
+                                        <p>
+                                            Занимайся поиском
+                                            самых красивых девушек и приглашай к сотрудничеству с нами
+                                        </p>
+                                    </div>
+                                    <label class="modal__label" for="name-input">
+                                        Как тебя зовут?
+                                    </label>
+                                    <input class="modal__input" id="name-input" type="text" name="name"
+                                        placeholder="Том" required>
+                                    <!-- onfocus="this.value=''" onblur="this.value='Том'" -->
+                                    <label class="modal__label" for="tel-input">
+                                        Твой телефон
+                                    </label>
+                                    <div class="modal__inner">
+                                        <div class="modal__box">
+                                            <select class="filter-selects__sort">
+                                                <option value="1" class="icon-ok">
+                                                    +380
+                                                </option>
+                                                <option value="2" class="icon-error">
+                                                    +381
+                                                </option>
+                                            </select>
+                                            <!-- <span>+380</span> -->
+                                        </div>
+                                        <input class="modal__input modal__input--tel" id="tel-input" type="tel"
+                                            name="tel" placeholder="(99)00000000" required>
+                                    </div>
+                                    <label class="modal__label" for="tel-input">
+                                        Твой e-mail
+                                    </label>
+                                    <input class="modal__input" id="email-input" type="email" name="email"
+                                        placeholder="kitty@site.com" required>
+
+                                    <label class="modal__label" for="city-input">
+                                        С какого ты города?
+                                    </label>
+                                    <input class="modal__input" id="city-input" type="text" name="city"
+                                        placeholder="Киев" required>
+                                    <button class="modal__link link" type="submit">
+                                        Отправить
+                                    </button>
+                                    <div class="modal__text">
+                                        Нажимая на кнопку, вы даете согласие на обработку персональных данных и
+                                        соглашаетесь
+                                        c
+                                        политикой конфиденциальности
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </li>
                     <li class="price__item ">
                         <button class="price__button price__button--leader" type="button">
@@ -529,6 +592,66 @@
                                 </p>
                             </div>
                         </button>
+                        <form class="modal modal--leader">
+                            <div class="modal__inner">
+                                <img class="modal__images" src="images/leader-c.svg" alt="Оператор">
+                                <div class="modal__box">
+                                    <h3 class="modal__subtitle">
+                                        Team Leader
+                                    </h3>
+                                    <div class="modal__text">
+                                        <p>
+                                            Обучай, вдохновляй и добивайся успеха вместе со своей командой мечты
+                                        </p>
+                                    </div>
+
+                                    <label class="modal__label" for="name-input">
+                                        Как тебя зовут?
+                                    </label>
+                                    <input class="modal__input" id="name-input" type="text" name="name"
+                                        placeholder="Том" required>
+                                    <!-- onfocus="this.value=''" onblur="this.value='Том'" -->
+                                    <label class="modal__label" for="tel-input">
+                                        Твой телефон
+                                    </label>
+                                    <div class="modal__inner">
+                                        <div class="modal__box">
+                                            <select class="filter-selects__sort">
+                                                <option value="1" class="icon-ok">
+                                                    +380
+                                                </option>
+                                                <option value="2" class="icon-error">
+                                                    +381
+                                                </option>
+                                            </select>
+                                            <!-- <span>+380</span> -->
+                                        </div>
+                                        <input class="modal__input modal__input--tel" id="tel-input" type="tel"
+                                            name="tel" placeholder="(99)00000000" required>
+                                    </div>
+                                    <label class="modal__label" for="tel-input">
+                                        Твой e-mail
+                                    </label>
+                                    <input class="modal__input" id="email-input" type="email" name="email"
+                                        placeholder="kitty@site.com" required>
+
+                                    <label class="modal__label" for="city-input">
+                                        С какого ты города?
+                                    </label>
+                                    <input class="modal__input" id="city-input" type="text" name="city"
+                                        placeholder="Киев" required>
+                                    <button class="modal__link link" type="submit">
+                                        Отправить
+                                    </button>
+                                    <div class="modal__text">
+                                        Нажимая на кнопку, вы даете согласие на обработку персональных данных и
+                                        соглашаетесь
+                                        c
+                                        политикой конфиденциальности
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </li>
                 </ul>
             </div>
@@ -538,15 +661,16 @@
             <div class="contacts__inner">
                 <!-- <img class="contacts__img" src="images/besocial_illustratio.svg" alt="занятые коты"> -->
                 <div class="contacts__box">
-                    <h2 class="contacts__title">
-                        Хочешь зарабатывать от 600$
-                    </h2>
-                    <div class="contacts__text">
-                        <p>
-                            Оставляй заявку – мы расскажем как это сделать!
-                        </p>
-                    </div>
+                    
                     <form class="form">
+                        <h2 class="form__title">
+                            Хочешь зарабатывать от 600$
+                        </h2>
+                        <div class="form__subtext">
+                            <p>
+                                Оставляй заявку – мы расскажем как это сделать!
+                            </p>
+                        </div>
                         <label class="form__label" for="name-input">
                             Как тебя зовут?
                         </label>
