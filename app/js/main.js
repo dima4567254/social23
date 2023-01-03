@@ -1,5 +1,5 @@
 $(function name(params) {
-
+    // для того чтобы плейсхолдер гас когда нажимаешь
     $(document).ready(function () {
         $('input,textarea').focus(function () {
             $(this).data('placeholder', $(this).attr('placeholder'))
@@ -9,6 +9,28 @@ $(function name(params) {
             $(this).attr('placeholder', $(this).data('placeholder'));
         });
     });
+
+    // $('.price__link').on('click', function () {
+    //     $(this).next().slideToggle();
+    //     $(this).toggleClass('active-modal');
+    // });
+
+    // $('.modal__button').on('click', function () {
+    //     $(this).next().slideToggle();
+    //     $(this).toggleClass('close');
+    // });
+
+
+   
+
+    // $('.modal__button').on('click', function () {
+    //     $('modal').toggleClass('close');
+
+    //     /*$('.header__logo').toggleClass('menu__list--active');
+    //     $('.intro__btn').toggleClass('menu__list--active');*/
+    // });
+
+    
 
 
     (function () {
@@ -25,7 +47,7 @@ $(function name(params) {
         }
     })();
 
-// проверить нужно ли
+    // проверить нужно ли
     setTimeout(function () {
         $('select,filter-selects__sort').styler();
     }, 100)
@@ -82,3 +104,20 @@ $(function name(params) {
 
 
 });
+
+ /*открывать форму*/
+ const modalWindow = document.querySelector('.modal');
+ const buttonModal = document.querySelector('.price__link');
+ /*addEventListenerпрослушиватель событий по нажатию левой кнопкой мышы*/
+ buttonModal.addEventListener('click', () => {
+     modalWindow.classList.add('active-modal'); /*добовляем класс*/
+ });
+
+ /*закрытие окна*/ 
+ modalWindow.addEventListener('click', (e) => {
+     const isModal = e.target.closest('.modal__inner'); /*если клик в любое место кроме .modal__inner то окно закрывается */ 
+     if (!isModal) {
+         modalWindow.classList.remove('active-modal');
+     }
+     /*добовляем класс*/
+ });

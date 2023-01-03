@@ -46,7 +46,7 @@
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#collections">
+                        <a class="menu__link" href="#price">
                             Хочу к вам!
                         </a>
                     </li>
@@ -80,7 +80,7 @@
                     <h2 class="intro__title">
                         Общайся, развивайся, зарабатывай!
                     </h2>
-                    <a class="intro__link link" href="#">
+                    <a class="intro__link link" href="#price">
                         Хочу в команду
                     </a>
                 </div>
@@ -166,7 +166,7 @@
                 </div>
             </div>
         </section>
- 
+
         <section class="terms">
             <div class="container">
                 <h2 class="terms__title">
@@ -368,7 +368,7 @@
             </div>
         </section>
 
-        <section class="price">
+        <section class="price" id="price">
             <div class="container">
                 <h2 class="price__title title">
                     Хочешь к нам? Отлично! Нам нужны:
@@ -401,6 +401,69 @@
                                 </p>
                             </div>
                         </a>
+
+                        <form class="modal">
+                            <div class="modal__inner">
+                                <button class="modal__button" type="button">
+                                    <span></span>
+                                    <span class="sr-only">open menu</span>
+                                </button>
+                                <img class="modal__images" src="images/operator-c.svg" alt="Оператор">
+                                <div class="modal__box">
+                                    <h2 class="modal__title">Оператор чата</h2>
+                                    <div class="modal__text">
+                                        <p>
+                                            Заводи новые знакомства, общайся и зарабатывай
+                                        </p>
+                                    </div>
+
+                                    <label class="modal__label" for="name-input">
+                                        Как тебя зовут?
+                                    </label>
+                                    <input class="modal__input" id="name-input" type="text" name="name"
+                                        placeholder="Том" required>
+                                    <!-- onfocus="this.value=''" onblur="this.value='Том'" -->
+                                    <label class="modal__label" for="tel-input">
+                                        Твой телефон
+                                    </label>
+                                    <div class="modal__inner">
+                                        <div class="modal__box">
+                                            <select class="filter-selects__sort">
+                                                <option value="1" class="icon-ok">
+                                                    +380
+                                                </option>
+                                                <option value="2" class="icon-error">
+                                                    +381
+                                                </option>
+                                            </select>
+                                            <!-- <span>+380</span> -->
+                                        </div>
+                                        <input class="modal__input modal__input--tel" id="tel-input" type="tel"
+                                            name="tel" placeholder="(99)00000000" required>
+                                    </div>
+                                    <label class="modal__label" for="tel-input">
+                                        Твой e-mail
+                                    </label>
+                                    <input class="modal__input" id="email-input" type="email" name="email"
+                                        placeholder="kitty@site.com" required>
+
+                                    <label class="modal__label" for="city-input">
+                                        С какого ты города?
+                                    </label>
+                                    <input class="modal__input" id="city-input" type="text" name="city"
+                                        placeholder="Киев" required>
+                                    <button class="modal__link link" type="submit">
+                                        Отправить
+                                    </button>
+                                    <div class="modal__text">
+                                        Нажимая на кнопку, вы даете согласие на обработку персональных данных и
+                                        соглашаетесь
+                                        c
+                                        политикой конфиденциальности
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </li>
                     <li class="price__item">
                         <a class="price__link price__link--scout" href="#">

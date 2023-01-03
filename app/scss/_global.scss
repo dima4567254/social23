@@ -66,3 +66,21 @@ body {
         color: $active;
     }
 }
+
+
+.close {
+    display: none;
+    // .madal {
+    //     display: none;
+    // }
+}
+
+.active {
+    background-image: url('../images/caret_down.svg');
+    background-position: right;
+    background-size: auto;
+    // background-size: cover;
+    // border-top: 5px solid red;
+    // background-color: red;
+}
+

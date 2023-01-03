@@ -498,6 +498,8 @@ body {
     min-height: 850px;
     height: 100vh;
     padding: 40px 0px;
+    position: relative;
+
 
     &__title {
         margin-bottom: 30px;
@@ -528,6 +530,7 @@ body {
         }
 
         // возможно переименовать 2 текст
+
     }
 
 
@@ -615,7 +618,127 @@ body {
 
     }
 
+    &__form {
+        // width: 100%;
+        // height: 100%;
+        // // backdrop-filter: blur(4rem);
+        // position: fixed;
+        // top: 10%;
+        // transform: translateX(-50%);
+        // left: 50%;
+        // // left: 0;
+
+        // z-index: 999;
+        // background-color: #ffffff;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        overflow-y: auto;
+        overflow-x: hidden;
+        backdrop-filter: blur(4rem);
+        padding: 3rem 0;
+        display: none;
+        z-index: 100;
+
+    }
+
+    &__modal {
+        max-width: 560px;
+        // // max-height: 39.1rem;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-direction: column;
+        // margin: 0 auto;
+
+        background: #ffffff url('../');
+        /*вставить ромбики 11мин*/
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        box-sizing: 0rem 0rem 3.5rem rgba(212, 20, 90, 0.25);
+        border-radius: 1.5rem;
+
+
+        // position: fixed;
+        // top: 0;
+        // left: 0;
+        // width: 100%;
+        // height: 100%;
+        // // display: flex;
+        // overflow-y: auto;
+        // overflow-x: hidden;
+
+        // padding: 3rem 0;
+        // display: none;
+
+    }
+
+    &__images {
+        width: 560px;
+        height: 228px;
+        object-fit: cover;
+    }
+
+    &__box {
+        max-width: 560px;
+        // max-height: 39.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    &__button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        // order: 1;
+        // margin-left: 40px;
+        width: 30px;
+        height: 22px;
+        position: relative;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        padding: 10px;
+        z-index: 999;
+        cursor: pointer;
+
+        span {
+            height: 3px;
+            width: 100%;
+            background-color: #000000;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            height: 3px;
+            width: 100%;
+            background-color: #000000;
+        }
+
+        &::before {
+            content: '';
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+    }
 }
+
+
+
 
 .contacts {
     // height: 100vh;
@@ -634,13 +757,13 @@ body {
     //     right: 0;
     //     height: 1px;
     //     width: 1px;
-      
+
     // }
 
     &__inner {
         display: flex;
         justify-content: flex-end;
-        
+
     }
 
     &__img {
@@ -1010,5 +1133,138 @@ li .zero {
     background-repeat: no-repeat;
     color: #000;
 }
+
+.modal {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    // right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    // left: 50%;
+    // transform: translateX(-50%);
+    // overflow-y: auto;
+    // overflow-x: hidden;
+    backdrop-filter: blur(4rem);
+    // padding: 3rem 0;
+    display: none;
+    // z-index: 100;
+
+    &__inner {
+        top: 10%;
+        position: relative;
+        max-width: 560px;
+        left: 50%;
+        transform: translateX(-50%);
+        // // max-height: 39.1rem;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-direction: column;
+        // margin: 0 auto;
+
+        background: #ffffff url('../');
+        /*вставить ромбики 11мин*/
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        box-sizing: 0rem 0rem 3.5rem rgba(212, 20, 90, 0.25);
+        // border-radius: 1.5rem;
+
+    }
+
+    &__button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        // order: 1;
+        // margin-left: 40px;
+        width: 30px;
+        height: 22px;
+
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        // padding: 10px;
+        z-index: 999;
+        cursor: pointer;
+
+        span {
+            height: 3px;
+            width: 100%;
+            background-color: #000000;
+            transform: scale(0);
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            height: 3px;
+            width: 100%;
+            background-color: #000000;
+        }
+
+        &::before {
+            content: '';
+            // top: 0;
+            top: 9px;
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            // bottom: 0;
+            bottom: 10px;
+            transform: rotate(-45deg);
+        }
+
+        // &__btn span {
+        //     transform: scale(0);
+        // }
+
+        // &__btn:before {
+        //     transform: rotate(45deg);
+        //     // top: 9px;
+        // }
+
+        &__btn::after {
+            transform: rotate(-45deg);
+            // bottom: 10px;
+        }
+    }
+
+    &__images {
+        width: 560px;
+        height: 290px;
+        object-fit: cover;
+    }
+
+    &__box {
+        padding: 40px 45px;
+    }
+
+    &__label {}
+
+    &__input {}
+
+    &__input--tel {}
+
+    &__link {}
+
+    &__text {}
+}
+
+.active-modal {
+    display: flex;
+    // display: block;
+}
+
+
 
 @import 'media';
