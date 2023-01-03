@@ -105,19 +105,20 @@ $(function name(params) {
 
 });
 
- /*открывать форму*/
- const modalWindow = document.querySelector('.modal');
- const buttonModal = document.querySelector('.price__link');
- /*addEventListenerпрослушиватель событий по нажатию левой кнопкой мышы*/
- buttonModal.addEventListener('click', () => {
-     modalWindow.classList.add('active-modal'); /*добовляем класс*/
- });
+//  /*открывать форму*/
+//  const modalWindow = document.querySelector('.modal');
+//  const buttonModal = document.querySelector('.price__button--operator, price__button--scout');
+ 
+//  /*addEventListenerпрослушиватель событий по нажатию левой кнопкой мышы*/
+//  buttonModal.addEventListener('click', () => {
+//      modalWindow.classList.add('active-modal'); /*добовляем класс*/
+//  });
 
- /*закрытие окна*/ 
- modalWindow.addEventListener('click', (e) => {
-     const isModal = e.target.closest('.modal__inner'); /*если клик в любое место кроме .modal__inner то окно закрывается */ 
-     if (!isModal) {
-         modalWindow.classList.remove('active-modal');
-     }
-     /*добовляем класс*/
- });
+//  /*закрытие окна*/ 
+//  modalWindow.addEventListener('click', (e) => {
+//      const isModal = e.target.closest('.modal__inner'); /*если клик в любое место кроме .modal__inner то окно закрывается */ 
+//      if (!isModal) {
+//          modalWindow.classList.remove('active-modal');
+//      }
+//      /*добовляем класс*/
+//  });

@@ -548,21 +548,25 @@ body {
     &__items li {
         color: $white;
         font-weight: 400;
+        
 
 
     }
 
-    &__link {
+    &__button {
         min-height: 680px;
         padding: 30px;
         width: 360px;
         display: flex;
         flex-direction: column;
-        // align-items: center;
+        align-items: flex-start;
+        text-align: start;
         // justify-content: start;
         position: relative;
-        // background-color: red;
+        background-color: transparent;
         transition: color 0.5s;
+        // outline: none;
+        border: none;
 
         &::before {
             content: "";
@@ -595,8 +599,6 @@ body {
             }
         }
 
-
-
         &:focus {
             color: $green;
         }
@@ -619,17 +621,6 @@ body {
     }
 
     &__form {
-        // width: 100%;
-        // height: 100%;
-        // // backdrop-filter: blur(4rem);
-        // position: fixed;
-        // top: 10%;
-        // transform: translateX(-50%);
-        // left: 50%;
-        // // left: 0;
-
-        // z-index: 999;
-        // background-color: #ffffff;
         position: fixed;
         top: 0;
         right: 0;
@@ -647,34 +638,13 @@ body {
 
     &__modal {
         max-width: 560px;
-        // // max-height: 39.1rem;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // flex-direction: column;
-        // margin: 0 auto;
 
         background: #ffffff url('../');
-        /*вставить ромбики 11мин*/
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         box-sizing: 0rem 0rem 3.5rem rgba(212, 20, 90, 0.25);
         border-radius: 1.5rem;
-
-
-        // position: fixed;
-        // top: 0;
-        // left: 0;
-        // width: 100%;
-        // height: 100%;
-        // // display: flex;
-        // overflow-y: auto;
-        // overflow-x: hidden;
-
-        // padding: 3rem 0;
-        // display: none;
-
     }
 
     &__images {
@@ -685,7 +655,6 @@ body {
 
     &__box {
         max-width: 560px;
-        // max-height: 39.1rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -693,48 +662,48 @@ body {
         margin: 0 auto;
     }
 
-    &__button {
-        position: absolute;
-        top: 0;
-        left: 0;
-        // order: 1;
-        // margin-left: 40px;
-        width: 30px;
-        height: 22px;
-        position: relative;
-        border: none;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: transparent;
-        padding: 10px;
-        z-index: 999;
-        cursor: pointer;
+    // &__button {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     // order: 1;
+    //     // margin-left: 40px;
+    //     width: 30px;
+    //     height: 22px;
+    //     position: relative;
+    //     border: none;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    //     background-color: transparent;
+    //     padding: 10px;
+    //     z-index: 999;
+    //     cursor: pointer;
 
-        span {
-            height: 3px;
-            width: 100%;
-            background-color: #000000;
-        }
+    //     span {
+    //         height: 3px;
+    //         width: 100%;
+    //         background-color: #000000;
+    //     }
 
-        &::before,
-        &::after {
-            position: absolute;
-            content: '';
-            height: 3px;
-            width: 100%;
-            background-color: #000000;
-        }
+    //     &::before,
+    //     &::after {
+    //         position: absolute;
+    //         content: '';
+    //         height: 3px;
+    //         width: 100%;
+    //         background-color: #000000;
+    //     }
 
-        &::before {
-            content: '';
-            top: 0;
-        }
+    //     &::before {
+    //         content: '';
+    //         top: 0;
+    //     }
 
-        &::after {
-            bottom: 0;
-        }
-    }
+    //     &::after {
+    //         bottom: 0;
+    //     }
+    // }
 }
 
 
