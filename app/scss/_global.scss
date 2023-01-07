@@ -4,10 +4,10 @@ body {
 }
 
 body {
-    // font-size: 16px;
+    font-size: 16px;
     line-height: 1;
-    // color: $default;
-    // @extend %dmsans-700px;
+    color: $black;
+    font-weight: 500;
     // letter-spacing: 0.6px;
     font-family: 'Roboto';
 }
@@ -24,11 +24,12 @@ body {
     border: 0;
 }
 
-/*
 .title {
-    @extend %title;
-}*/
-
+    color: $black2;
+    font-size: 40px;
+    font-weight: 700;
+    // !!! добавить всем этот класс
+}
 .main {
     flex-grow: 1;
 }
@@ -50,7 +51,7 @@ body {
     color: $black2;
     font-size: 16px;
     display: block;
-    max-width: 200px;
+    // max-width: 200px;
     transition: color 0.5s;
     text-align: center;
 
@@ -70,18 +71,17 @@ body {
 
 .close {
     display: none;
-    // .madal {
-    //     display: none;
-    // }
 }
 
 .active {
     background-image: url('../images/caret_down.svg');
     background-position: right;
-    background-size: auto;
-    // background-size: cover;
-    // border-top: 5px solid red;
-    // background-color: red;
+    background-size: cover;
+}
+
+.active-modal {
+    display: flex;
+
 }
 
 @function max($numbers...) {
