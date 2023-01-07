@@ -89,6 +89,8 @@
 
 .about {
     &__inner {
+        // padding: 150px 0;
+        height: 100vh;
         padding: 220px 0;
         display: flex;
         align-items: center;
@@ -96,6 +98,7 @@
         background-repeat: no-repeat;
         background-position: right center;
         background-size: 559px 779px;
+        // background-size: 459px 679px;
     }
 
     &__box {
@@ -116,9 +119,26 @@
 }
 
 .income {
+    height: 100vh;
     padding: 50px 0;
     background-color: $silver;
     overflow: hidden;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        // bottom: -60%;
+        // left: -15%;
+        bottom: -13%;
+        left: -3%;
+        height: 595px;
+        width: 500px;
+        background-image: url('../images/besocial_cat_5.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
 
     &__logo {
         width: 220px;
@@ -133,20 +153,7 @@
     &__wraper {
         display: flex;
         justify-content: space-between;
-        position: relative;
 
-        &::before {
-            content: "";
-            position: absolute;
-            bottom: -24%;
-            left: -15%;
-            height: 595px;
-            width: 500px;
-            background-image: url('../images/besocial_cat_5.svg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
     }
 
     &__title {
@@ -156,7 +163,7 @@
 
     &__text {
         color: $black3;
-        font-size: 25px;
+        font-size: 19px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -193,6 +200,7 @@
 }
 
 .terms {
+    height: 100vh;
     padding: 50px 0;
     background-color: $violet;
     color: $white;
@@ -305,6 +313,7 @@
 }
 
 .schedule {
+    height: 100vh;
     padding: 50px 0px;
     background-color: $silver;
     text-align: center;
@@ -336,18 +345,17 @@
 
     &__item {
         width: 300px;
-        padding: 20px;
+        padding: 30px;
         color: $white;
         position: relative;
+        border-radius: 10px;
 
         &::before {
             content: "";
             position: absolute;
-            top: 0;
-            right: 0;
-            // height: 40px;
-            // width: 40px;
-            background-image: url('../images/icons/circle.svg');
+            top: 22px;
+            left: 50%;
+            transform: translateX(-50%);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -355,15 +363,37 @@
 
         &--circle {
             background-color: $hover;
+
+            &::before {
+                background-image: url('../images/icons/circle.svg');
+                height: 40px;
+                width: 40px;
+            }
         }
 
         &--sunset {
             background-color: $violet;
+
+            &::before {
+                background-image: url('../images/icons/sunset.svg');
+                height: 39px;
+                width: 60px;
+            }
         }
 
         &--month {
             background-color: $black2;
+
+            &::before {
+                background-image: url('../images/icons/month.svg');
+                height: 45px;
+                width: 30px;
+            }
         }
+    }
+
+    &__box {
+        padding-top: 50px;
     }
 
     &__number {
@@ -381,7 +411,8 @@
 }
 
 .price {
-    // min-height: 850px;
+    min-height: 850px;
+    height: 100vh;
     padding: 50px 0px;
     position: relative;
 
@@ -402,6 +433,7 @@
     &__text {
         font-size: 18px;
         margin-bottom: 75%;
+        // margin-bottom: 60%;
         min-height: 55px;
 
         &:not(:last-child) {
@@ -513,6 +545,7 @@
 
 
 .contacts {
+    height: 100vh;
     position: relative;
 
     &::before {
@@ -592,10 +625,6 @@
         font-size: 12px;
         line-height: 1.5;
     }
-
-    &__inner {
-        display: flex;
-    }
 }
 
 .footer {
@@ -629,6 +658,28 @@
         &:active {
             color: $active;
         }
+
+        &--telegram {
+            // width: 50px;
+            // height: 50px;
+            // background-color: $hover;
+            // border-radius: 50%;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                // top: 5;
+                left: 50%;
+                transform: translateX(0%);
+                height: 50px;
+                width: 50px;
+                background-image: url('../images/icons/telegram.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+        }
     }
 
     &__logo {
@@ -641,6 +692,8 @@
         font-weight: 400;
         margin-bottom: 10px;
 
+
+
         &:not(:last-child) {
             margin-bottom: 10px;
         }
@@ -652,6 +705,26 @@
 
     &__inner {
         display: flex;
+    }
+
+    &__subtext {
+        font-weight: 400;
+        margin-bottom: 10px;
+        padding-left: 30px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 20px;
+            background-image: url('../images/icons/geo.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
     }
 
     &__info span {
@@ -697,6 +770,8 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        cursor: pointer;
+        transition: color 0.5s;
     }
 
     &__inner {
@@ -818,6 +893,21 @@
         text-align: center;
     }
 }
+
+// .header-fixed {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     z-index: 999;
+//     background-color: transparent;
+//     display: flex;
+//     justify-content: space-between;
+//     background-color: white;
+//     // max-width: 1200px;
+//     // margin: 0 auto;
+//     // padding: 0 15px;
+// }
 
 .active-modal {
     display: flex;

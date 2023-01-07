@@ -151,3 +151,15 @@ modalWindow3.addEventListener('click', (e) => {
     }
     /*добовляем класс*/
 });
+// скрипт который убирает полосу при скроле
+// $(function () {
+//     let header = $('.menu');
+
+//     $(window).scroll(function () {
+//         if ($(this).scrollTop() > 1) {
+//             header.addClass('header-fixed');
+//         } else {
+//             header.removeClass('header-fixed');
+//         }
+//     });
+// });

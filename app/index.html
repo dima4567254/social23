@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -22,15 +22,14 @@
 
 
 спорно титулы в модал должны быть h3 или h4
-спорно несколько svg не на беграунте
 -->
 
 <body>
     <header class="header">
         <div class="container">
-            <nav class="menu">
+            <nav class="menu ">
                 <a class="menu__logo-link" href="#">
-                    <img class="menu__logo logo " src="images/logo.svg" alt="logo">
+                    <img class="menu__logo logo" src="images/logo.svg" alt="logo">
                 </a>
                 <ul class="menu__items">
                     <li class="menu__item">
@@ -61,7 +60,7 @@
                 </ul>
                 <button class="menu__btn" type="button">
                     <span></span>
-                    <span class="sr-only">open menu</span>
+                    <span class="sr-only">открыть меню</span>
                 </button>
             </nav>
         </div>
@@ -241,42 +240,39 @@
                 </div>
                 <ul class="schedule__items">
                     <li class="schedule__item schedule__item--circle">
-                        <svg class="schedule__svg" width="40px" height="40px">
-                            <use fill="white" xlink:href="images/sprite/icons.svg#circle"></use>
-                        </svg>
-                        <div class="schedule__number">
-                            07:00 – 15:00
-                        </div>
-                        <div class="schedule__subtext">
-                            <p>
-                                Утренняя смена
-                            </p>
+                        <div class="schedule__box">
+                            <div class="schedule__number">
+                                07:00 – 15:00
+                            </div>
+                            <div class="schedule__subtext">
+                                <p>
+                                    Утренняя смена
+                                </p>
+                            </div>
                         </div>
                     </li>
                     <li class="schedule__item schedule__item--sunset">
-                        <svg class="schedule__svg" width="60px" height="39px">
-                            <use fill="white" xlink:href="images/sprite/icons.svg#sunset"></use>
-                        </svg>
-                        <div class="schedule__number">
-                            15:00 – 23:00
-                        </div>
-                        <div class="schedule__subtext">
-                            <p>
-                                Вечерняя смена
-                            </p>
+                        <div class="schedule__box">
+                            <div class="schedule__number">
+                                15:00 – 23:00
+                            </div>
+                            <div class="schedule__subtext">
+                                <p>
+                                    Вечерняя смена
+                                </p>
+                            </div>
                         </div>
                     </li>
                     <li class="schedule__item schedule__item--month">
-                        <svg class="schedule__svg" width="30px" height="45px">
-                            <use fill="white" xlink:href="images/sprite/icons.svg#month"></use>
-                        </svg>
-                        <div class="schedule__number">
-                            23:00 – 7:00
-                        </div>
-                        <div class="schedule__subtext">
-                            <p>
-                                Ночная смена
-                            </p>
+                        <div class="schedule__box">
+                            <div class="schedule__number">
+                                23:00 – 7:00
+                            </div>
+                            <div class="schedule__subtext">
+                                <p>
+                                    Ночная смена
+                                </p>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -285,45 +281,41 @@
                         12 часов – заработок от 800$
                     </p>
                 </div>
-
                 <ul class="schedule__items">
                     <li class="schedule__item schedule__item--circle">
-                        <svg class="schedule__svg" width="40px" height="40px">
-                            <use fill="white" xlink:href="images/sprite/icons.svg#circle"></use>
-                        </svg>
-                        <div class="schedule__number">
-                            07:00 – 19:00
-                        </div>
-                        <div class="schedule__subtext">
-                            <p>
-                                Утренняя смена
-                            </p>
+                        <div class="schedule__box">
+                            <div class="schedule__number">
+                                07:00 – 19:00
+                            </div>
+                            <div class="schedule__subtext">
+                                <p>
+                                    Утренняя смена
+                                </p>
+                            </div>
                         </div>
                     </li>
                     <li class="schedule__item schedule__item--sunset">
-                        <svg class="schedule__svg" width="60px" height="39px">
-                            <use fill="white" xlink:href="images/sprite/icons.svg#sunset"></use>
-                        </svg>
-                        <div class="schedule__number">
-                            07:00 – 15:00
-                        </div>
-                        <div class="schedule__subtext">
-                            <p>
-                                Утренняя смена
-                            </p>
+                        <div class="schedule__box">
+                            <div class="schedule__number">
+                                07:00 – 15:00
+                            </div>
+                            <div class="schedule__subtext">
+                                <p>
+                                    Утренняя смена
+                                </p>
+                            </div>
                         </div>
                     </li>
                     <li class="schedule__item schedule__item--month">
-                        <svg class="schedule__svg" width="30px" height="45px">
-                            <use fill="white" xlink:href="images/sprite/icons.svg#month"></use>
-                        </svg>
-                        <div class="schedule__number">
-                            15:00 – 03:00
-                        </div>
-                        <div class="schedule__subtext">
-                            <p>
-                                Вечерняя смена
-                            </p>
+                        <div class="schedule__box">
+                            <div class="schedule__number">
+                                15:00 – 03:00
+                            </div>
+                            <div class="schedule__subtext">
+                                <p>
+                                    Вечерняя смена
+                                </p>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -388,7 +380,7 @@
                                     </label>
                                     <div class="modal__inner">
                                         <input class="modal__input modal__input--tel" id="operator-tel" type="tel"
-                                            name="tel" placeholder="(99)00000000" required>
+                                            name="tel" placeholder="+99 (099) 99999999" required>
                                     </div>
                                     <!-- класс инер нужен? -->
                                     <label class="modal__label" for="operator-email">
@@ -469,7 +461,7 @@
                                     </label>
                                     <div class="modal__inner">
                                         <input class="modal__input modal__input--tel" id="scout-tel" type="tel"
-                                            name="tel" placeholder="+(099)00000000" required>
+                                            name="tel" placeholder="+99 (099) 99999999" required>
                                     </div>
                                     <label class="modal__label" for="scout-email">
                                         Твой e-mail
@@ -554,7 +546,7 @@
                                     </label>
 
                                     <input class="modal__input modal__input--tel" id="leader-tel" type="tel" name="tel"
-                                        placeholder="(99)00000000" required>
+                                        placeholder="+99 (099) 99999999" required>
 
                                     <label class="modal__label" for="leader-email">
                                         Твой e-mail
@@ -606,10 +598,10 @@
                             Твой телефон
                         </label>
                         <!-- проверить нужен лп если класс box -->
-                        <div class="form__inner">
-                            <input class="form__input form__input--tel" id="form-tel" type="tel" name="tel"
-                                placeholder="+38 (050) 203-80-79" required>
-                        </div>
+
+                        <input class="form__input form__input--tel" id="form-tel" type="tel" name="tel"
+                            placeholder="+99 (099) 99999999" required>
+
                         <label class="form__label" for="form-email">
                             Твой e-mail
                         </label>
@@ -655,25 +647,18 @@
                             Написать в мессенджерах:
                         </p>
                     </div>
-                    <a class="footer__link" href="#">
-                        <svg class="currency__svg" width="50px" height="50px" fill="#ffb71b">
-                            <use xlink:href="images/sprite/icons.svg#telegram"></use>
-                        </svg>
+                    <a class="footer__link footer__link--telegram" href="#">
+                        <span class="sr-only">ссылка на телеграм</span>
                     </a>
                 </div>
                 <div class="footer__item">
-                    <div class="footer__inner">
-                        <svg class="footer__svg" width="20px" height="25px" fill="#ffb71b">
-                            <use xlink:href="images/sprite/icons.svg#geo"></use>
-                        </svg>
-                        <div class="footer__text">
-                            <p>
-                                г. Киев,
-                            </p>
-                            <p>
-                                м. Льва Толстого:
-                            </p>
-                        </div>
+                    <div class="footer__subtext">
+                        <p>
+                            г. Киев,
+                        </p>
+                        <p>
+                            м. Льва Толстого:
+                        </p>
                     </div>
                     <a class="footer__maps link" href="#">
                         Посмотреть на Google Maps
