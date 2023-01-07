@@ -8,7 +8,7 @@ body {
     line-height: 1;
     color: $black;
     font-weight: 500;
-    // letter-spacing: 0.6px;
+    letter-spacing: 0, 6px;
     font-family: 'Roboto';
 }
 
@@ -28,8 +28,8 @@ body {
     color: $black2;
     font-size: 40px;
     font-weight: 700;
-    // !!! добавить всем этот класс
 }
+
 .main {
     flex-grow: 1;
 }
@@ -51,12 +51,11 @@ body {
     color: $black2;
     font-size: 16px;
     display: block;
-    // max-width: 200px;
     transition: color 0.5s;
     text-align: center;
 
     &:focus {
-        color: $green;
+        color: $focus;
     }
 
     &:hover {
@@ -85,8 +84,9 @@ body {
 }
 
 @function max($numbers...) {
-@return m#{a}x(#{$numbers});
+    @return m#{a}x(#{$numbers});
 }
+
 @function min($numbers...) {
-@return m#{i}n(#{$numbers});
+    @return m#{i}n(#{$numbers});
 }

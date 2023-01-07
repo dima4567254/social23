@@ -6,7 +6,7 @@
 
 .menu {
     .menu__btn {
-        display: none
+        display: none;
     }
 }
 
@@ -15,7 +15,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 999;
+    z-index: 100;
     background-color: transparent;
 }
 
@@ -49,7 +49,7 @@
         outline-offset: 5px;
 
         &:focus {
-            color: $green;
+            color: $focus;
         }
 
         &:hover {
@@ -64,8 +64,7 @@
 
 .intro {
     height: 100vh;
-    // min-height: 700px;
-    padding-top: 7.5%;
+    padding-top: 100px;
     z-index: 999;
     background-repeat: no-repeat;
     background-position: center center;
@@ -77,7 +76,6 @@
     }
 
     &__title {
-
         font-size: 45px;
         margin-bottom: 10px;
     }
@@ -90,9 +88,6 @@
 }
 
 .about {
-    // min-height: 700px;
-    // height: 100vh;
-
     &__inner {
         padding: 220px 0;
         display: flex;
@@ -108,9 +103,6 @@
     }
 
     &__title {
-        color: $black2;
-        font-size: 40px;
-        font-weight: 700;
         margin-bottom: 20px;
         max-width: 420px;
     }
@@ -126,8 +118,6 @@
 .income {
     padding: 50px 0;
     background-color: $silver;
-    // height: 100vh;
-    // min-height: 700px;
     overflow: hidden;
 
     &__logo {
@@ -136,16 +126,7 @@
         object-fit: cover;
     }
 
-    // &__box {}
-
-    // &__blok {
-    //     width: 500px;
-    //     height: 600px;
-    // }
-
     &__svg {
-        // margin-left: -50%;
-        // margin-top: 9%;
         display: flex;
     }
 
@@ -157,8 +138,6 @@
         &::before {
             content: "";
             position: absolute;
-            // bottom: -90px;
-            // left: -80px;
             bottom: -24%;
             left: -15%;
             height: 595px;
@@ -171,9 +150,6 @@
     }
 
     &__title {
-        color: $black2;
-        font-size: 40px;
-        font-weight: 700;
         max-width: 760px;
         margin-bottom: 20px;
     }
@@ -188,18 +164,15 @@
     }
 
     &__text p {
-        max-width: 300px;
+        max-width: 350px;
 
         &:not(:last-child) {
             margin-right: 30px;
         }
-
     }
 
     &__box {}
 }
-
-
 
 .statistics {
     &__items {
@@ -211,22 +184,18 @@
         color: $hover;
         font-size: 72px;
         font-weight: 700;
-
     }
 
     &__text {
         color: $black2;
         font-size: 20px;
-
     }
 }
 
 .terms {
-    padding: 40px 0;
+    padding: 50px 0;
     background-color: $violet;
     color: $white;
-    // height: 100vh;
-    // min-height: 700px;
 
     &__title {
         font-size: 40px;
@@ -276,7 +245,6 @@
         &--salary {
             &::before {
                 background-image: url('../images/terms/salary1.svg');
-
             }
 
             &::after {
@@ -292,7 +260,6 @@
             &::after {
                 background-image: url('../images/terms/b2.svg');
             }
-
         }
 
         &--freedom {
@@ -330,7 +297,6 @@
         color: $hover;
         font-size: 28px;
         margin-bottom: 10px;
-
     }
 
     &__text {
@@ -339,9 +305,7 @@
 }
 
 .schedule {
-    // min-height: 700px;
-    // height: 100vh;
-    padding: 40px 0px;
+    padding: 50px 0px;
     background-color: $silver;
     text-align: center;
 
@@ -368,15 +332,26 @@
         &:not(:last-child) {
             margin-bottom: 50px; // !!!тут надо было как то по другому
         }
-
     }
 
     &__item {
-        // max-width: 300px;
-        // min-width: 300px;
         width: 300px;
         padding: 20px;
         color: $white;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            // height: 40px;
+            // width: 40px;
+            background-image: url('../images/icons/circle.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
 
         &--circle {
             background-color: $hover;
@@ -405,15 +380,10 @@
     }
 }
 
-
-
 .price {
-    // min-height: 700px;
-    min-height: 850px;
-    // height: 100vh;
-    padding: 40px 0px;
+    // min-height: 850px;
+    padding: 50px 0px;
     position: relative;
-
 
     &__title {
         margin-bottom: 30px;
@@ -437,9 +407,6 @@
         &:not(:last-child) {
             margin-bottom: 30px;
         }
-
-        // возможно переименовать 2 текст
-
     }
 
     &__items {
@@ -457,14 +424,9 @@
         padding: 30px;
         width: 360px;
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: start;
-        // justify-content: start;
         position: relative;
         background-color: transparent;
         transition: color 0.5s;
-        // outline: none;
         border: none;
         color: $white;
 
@@ -500,7 +462,7 @@
         }
 
         &:focus {
-            color: $green;
+            color: $focus;
         }
 
         &:hover {
@@ -510,6 +472,13 @@
         &:active {
             color: $active;
         }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: start;
     }
 
     &__item {}
@@ -538,25 +507,13 @@
         height: 228px;
         object-fit: cover;
     }
-
-    &__box {
-        max-width: 560px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin: 0 auto;
-    }
 }
 
 
 
 
 .contacts {
-    // height: 100vh;
-    // min-height: 624px;
     position: relative;
-
 
     &::before {
         content: "";
@@ -574,7 +531,6 @@
     &__inner {
         display: flex;
         justify-content: flex-end;
-
     }
 
     &__img {
@@ -588,8 +544,6 @@
         padding: 60px;
         width: 50%;
     }
-
-
 }
 
 
@@ -597,8 +551,6 @@
     color: $black2;
 
     &__title {
-        font-size: 40px;
-        font-weight: 700;
         margin-bottom: 20px;
     }
 
@@ -643,7 +595,6 @@
 
     &__inner {
         display: flex;
-
     }
 }
 
@@ -667,9 +618,8 @@
         font-size: 18px;
         transition: color 0.5s;
 
-
         &:focus {
-            color: $green;
+            color: $focus;
         }
 
         &:hover {
@@ -707,7 +657,6 @@
     &__info span {
         font-size: 18px;
         padding-left: 10px;
-        //    2 раза задал
     }
 
     &__svg {
@@ -723,7 +672,7 @@
 }
 
 .modal {
-    z-index: 100;
+    z-index: 200;
     position: fixed;
     top: 0;
     left: 0;
@@ -736,7 +685,19 @@
     display: none;
     font-weight: 400;
     line-height: 1.5;
-    // height: 300px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        height: 30px;
+        width: 30px;
+        background-image: url('../images/icons/cross.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
 
     &__inner {
         top: 10%;
