@@ -166,8 +166,16 @@
         font-size: 45px;
         margin-bottom: 10px;
 
+        @media (max-width: 992px) {
+            font-size: 36px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 30px;
+        }
+
         @media (max-width: 576px) {
-            font-size: 40px;
+            font-size: 25px;
         }
     }
 
@@ -276,7 +284,7 @@
     background-position: -325% 137%;
     background-size: 90% 76%;
     // &::before {
-        
+
     //     content: "";
     //     position: absolute;
     //     // bottom: -60%;
@@ -353,25 +361,53 @@
     background-color: $violet;
     color: $white;
 
+    @media (max-width: 1200px) {
+        height: 100%;
+    }
+
     &__title {
         font-size: 40px;
         font-weight: 700;
         margin-bottom: 20px;
         text-align: center;
+
+        @media (max-width: 992px) {
+            font-size: 36px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 30px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 25px;
+        }
     }
 
     &__items {
         display: flex;
         justify-content: space-between;
-        gap: 15px;
+        flex-wrap: wrap;
+        gap: 15px 15px;
+
+        @media (max-width: 1200px) {
+            justify-content: center;
+            // gap: 15px 15px;
+        }
     }
 
     &__item {
         padding: 15px;
         background-color: $violet2;
         width: 220px;
-        height: 540px;
+        height: 515px;
         position: relative;
+
+        @media (max-width: 1200px) {
+            // &:not(:last-child) {
+            //     margin-right: 20px;
+            // }
+        }
 
         &::before {
             content: "";
@@ -453,6 +489,10 @@
         color: $hover;
         font-size: 28px;
         margin-bottom: 10px;
+
+        @media (max-width: 576px) {
+            font-size: 25px;
+        }
     }
 
     &__text {
@@ -466,10 +506,11 @@
     background-color: $silver;
     text-align: center;
 
+    @media (max-width: 1200px) {
+        height: 100%;
+    }
+
     &__title {
-        color: $black2;
-        font-size: 40px;
-        font-weight: 700;
         margin-bottom: 30px;
     }
 
@@ -484,10 +525,14 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 0px 40px;
+        gap: 40px 40px;
 
         &:not(:last-child) {
-            margin-bottom: 50px; // !!!тут надо было как то по другому
+            margin-bottom: 40px; // !!!тут надо было как то по другому
+        }
+
+        @media (max-width: 1200px) {
+            justify-content: center;
         }
     }
 
@@ -564,6 +609,10 @@
     padding: 50px 0px;
     position: relative;
 
+    @media (max-width: 1200px) {
+        height: 100%;
+    }
+
     &__title {
         margin-bottom: 30px;
     }
@@ -571,6 +620,12 @@
     &__list {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px 20px;
+
+        @media (max-width: 1200px) {
+            justify-content: center;
+        }
     }
 
     &__subtitle {
@@ -584,6 +639,11 @@
         // margin-bottom: 60%;
         min-height: 55px;
 
+        @media (max-width: 576px) {
+            margin-bottom: 125%;
+            // margin-bottom: 125%;
+        }
+
         &:not(:last-child) {
             margin-bottom: 30px;
         }
@@ -592,7 +652,7 @@
     &__items {
         list-style: disc;
         padding-left: 20px;
-        margin-bottom: auto;
+        margin-bottom: 20px;
     }
 
     &__items li {
@@ -610,6 +670,13 @@
         border: none;
         color: $white;
 
+        @media (max-width: 576px) {
+            // width: 280px;
+            max-width: 360px;
+            min-height: 820px;
+            // height: 100%;
+        }
+
         &::before {
             content: "";
             position: absolute;
@@ -621,11 +688,20 @@
             background-position: center;
             background-size: cover;
             z-index: -100;
+
+            @media (max-width: 576px) {
+                // width: 280px;
+                height: 820px;
+                // height: 100%;
+                background-position: 90% 0%;
+            }
         }
 
         &--operator {
             &::before {
                 background-image: url('../images/operator.svg');
+                background-position: 80% 0%;
+                // background-size: 100% 100%;
             }
         }
 
@@ -688,9 +764,6 @@
         object-fit: cover;
     }
 }
-
-
-
 
 .contacts {
     height: 100vh;
