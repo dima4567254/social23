@@ -221,7 +221,8 @@
         @media (max-width: 576px) {
             // padding: 50px 0 50px 0;
             // background-size: 100% 135%;
-            background-size: 67% 126%;
+            // background-size: 67% 126%;
+            background-size: 100% 126%;
             background-position: 50% -13%;
         }
     }
@@ -607,7 +608,6 @@
     min-height: 850px;
     height: 100vh;
     padding: 50px 0px;
-    position: relative;
 
     @media (max-width: 1200px) {
         height: 100%;
@@ -615,6 +615,10 @@
 
     &__title {
         margin-bottom: 30px;
+
+        @media (max-width: 576px) {
+            margin-bottom: 20px;
+        }
     }
 
     &__list {
@@ -639,11 +643,6 @@
         // margin-bottom: 60%;
         min-height: 55px;
 
-        @media (max-width: 576px) {
-            margin-bottom: 125%;
-            // margin-bottom: 125%;
-        }
-
         &:not(:last-child) {
             margin-bottom: 30px;
         }
@@ -652,69 +651,53 @@
     &__items {
         list-style: disc;
         padding-left: 20px;
-        margin-bottom: 20px;
+        margin-bottom: auto;
+
+        @media (max-width: 576px) {
+            margin-bottom: 20px;
+        }
     }
 
     &__items li {
         font-weight: 400;
     }
 
+    &__item {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @media (max-width: 576px) {
+            // background-position: center 31px;
+        }
+
+        &--operator {
+            background-image: url('../images/operator.svg');
+        }
+
+        &--leader {
+            background-image: url('../images/leader.svg');
+        }
+
+        &--scout {
+            background-image: url('../images/scout.svg');
+        }
+    }
+
     &__button {
         min-height: 680px;
         padding: 30px;
-        width: 360px;
+        max-width: 360px;
         display: flex;
-        position: relative;
+        // position: relative;
         background-color: transparent;
         transition: color 0.5s;
         border: none;
         color: $white;
 
         @media (max-width: 576px) {
-            // width: 280px;
-            max-width: 360px;
-            min-height: 820px;
-            // height: 100%;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            height: 680px;
-            width: 360px;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            z-index: -100;
-
-            @media (max-width: 576px) {
-                // width: 280px;
-                height: 820px;
-                // height: 100%;
-                background-position: 90% 0%;
-            }
-        }
-
-        &--operator {
-            &::before {
-                background-image: url('../images/operator.svg');
-                background-position: 80% 0%;
-                // background-size: 100% 100%;
-            }
-        }
-
-        &--leader {
-            &::before {
-                background-image: url('../images/leader.svg');
-            }
-        }
-
-        &--scout {
-            &::before {
-                background-image: url('../images/scout.svg');
-            }
+            width: 320px;
+            padding: 20px;
         }
 
         &:focus {
@@ -736,8 +719,6 @@
         align-items: flex-start;
         text-align: start;
     }
-
-    &__item {}
 
     &__form {
         position: fixed;
@@ -761,7 +742,11 @@
     &__images {
         width: 560px;
         height: 228px;
-        object-fit: cover;
+        // object-fit: cover;
+
+        @media (max-width: 576px) {
+            // object-fit: none;
+        }
     }
 }
 
@@ -777,9 +762,22 @@
         background-image: url('../images/besocial_illustratio.svg');
         background-repeat: no-repeat;
         background-position: center;
-        background-size: auto 950px;
+        // background-size: auto 950px;
+        background-size: cover;
         height: 100%;
         width: 50%;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            // bottom: -16%;
+            // background-position: 0px 50%;
+            // background-size: 100% 100%;
+            bottom: -100%;
+            background-position: center;
+            // background-size: 100% 78%;
+            top: inherit;
+
+        }
     }
 
     &__inner {
@@ -797,9 +795,25 @@
         background-color: $silver;
         padding: 60px;
         width: 50%;
+
+        @media (max-width: 1200px) {
+            padding: 50px;
+        }
+
+        @media (max-width: 992px) {
+            padding: 40px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 30px;
+            width: 100%;
+        }
+
+        @media (max-width: 576px) {
+            padding: 20px;
+        }
     }
 }
-
 
 .form {
     color: $black2;
@@ -1066,11 +1080,19 @@
         height: 290px;
         object-fit: cover;
         display: block;
+
+        @media (max-width: 576px) {
+            object-position: right;
+        }
     }
 
     &__box {
         padding: 40px 30px;
         background-color: $white;
+
+        @media (max-width: 576px) {
+            padding: 20px;
+        }
     }
 
     &__label {
@@ -1100,6 +1122,10 @@
         font-size: 14px;
         margin-bottom: 20px;
         text-align: center;
+
+        @media (max-width: 576px) {
+            text-align: start;
+        }
 
         &--color {
             color: $silver2;
