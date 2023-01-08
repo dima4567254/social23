@@ -4,12 +4,6 @@
 @import 'global';
 @import 'libs';
 
-.menu {
-    .menu__btn {
-        display: none;
-    }
-}
-
 .header {
     position: absolute;
     top: 0;
@@ -22,19 +16,50 @@
 .menu {
     display: flex;
     justify-content: space-between;
-
     padding-top: 15px;
 
-    // &__btn {}
+    &__logo-link {
+        margin-right: 20px;
+        z-index: 200;
+    }
 
     &__items {
         display: flex;
         align-items: center;
+
+        @media (max-width: 992px) {
+            // display: none;
+            transform: translateY(-200%);
+            position: absolute;
+            top: 0px;
+            left: 0;
+            width: 100%;
+            flex-direction: column;
+            // align-items: center;
+            z-index: 5;
+            background-color: $silver2;
+            transition: transform 1s;
+            padding: 150px 0 150px;
+
+            &.menu__items--active {
+                transform: translateY(0%);
+            }
+        }
     }
 
     &__item {
         &:not(:last-child) {
             margin-right: 30px;
+        }
+
+        @media (max-width: 992px) {
+            width: 100%;
+            text-align: center;
+            display: block;
+
+            &:not(:last-child) {
+                margin: 0px 0px 20px 0px;
+            }
         }
     }
 
@@ -48,6 +73,11 @@
         outline-color: $black;
         outline-offset: 5px;
 
+        @media (max-width: 992px) {
+            // z-index: 200;
+            display: block;
+        }
+
         &:focus {
             color: $focus;
         }
@@ -60,7 +90,52 @@
             color: $active;
         }
     }
+
+    &__btn {
+        display: none;
+
+        @media (max-width: 992px) {
+            // display: block;
+            // order: 1;
+            margin-left: 40px;
+            width: 30px;
+            height: 22px;
+            position: relative;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: transparent;
+            padding: 0;
+            z-index: 10;
+
+            span {
+                height: 3px;
+                width: 100%;
+                background-color: $black;
+            }
+
+            &::before,
+            &::after {
+                position: absolute;
+                content: '';
+                height: 3px;
+                width: 100%;
+                background-color: #000000;
+            }
+
+            &::before {
+                content: '';
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+            }
+        }
+    }
 }
+
 
 .intro {
     height: 100vh;
@@ -71,6 +146,18 @@
     background-size: cover;
     background-image: url('../images/icons/cats.svg');
 
+    @media (max-width: 992px) {
+        background-position: left;
+    }
+
+    @media (max-width: 768px) {
+        background-position: 15% 0%;
+    }
+
+    @media (max-width: 576px) {
+        background-position: 32% 0%;
+    }
+
     &__box {
         max-width: 350px;
     }
@@ -78,6 +165,10 @@
     &__title {
         font-size: 45px;
         margin-bottom: 10px;
+
+        @media (max-width: 576px) {
+            font-size: 40px;
+        }
     }
 
     &__link {
@@ -98,21 +189,74 @@
         background-repeat: no-repeat;
         background-position: right center;
         background-size: 559px 779px;
+
         // background-size: 459px 679px;
+        @media (max-width: 1200px) {
+            background-size: 50% 80%;
+            // padding: 165px 0;
+            // padding: 0px 0;
+        }
+
+        @media (max-width: 992px) {
+            background-size: 40% 50%;
+            padding: 50px 0;
+            // padding: 0px 0;
+            align-items: flex-start;
+            background-position: 50% 90%;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            // padding: 110px 0;
+        }
+
+        @media (max-width: 576px) {
+            // padding: 50px 0 50px 0;
+            // background-size: 100% 135%;
+            background-size: 67% 126%;
+            background-position: 50% -13%;
+        }
     }
+
 
     &__box {
         max-width: 500px;
+
+        @media (max-width: 992px) {
+            max-width: 415px;
+        }
     }
 
     &__title {
         margin-bottom: 20px;
         max-width: 420px;
+
+        @media (max-width: 992px) {
+            font-size: 36px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 30px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 25px;
+        }
     }
 
     &__text {
         color: $black3;
         font-size: 24px;
+
+        @media (max-width: 992px) {
+            font-size: 20px;
+        }
+
+        @media (max-width: 768px) {}
+
+        @media (max-width: 576px) {
+            font-size: 18px;
+        }
     }
 
     &__img {}
@@ -122,23 +266,27 @@
     height: 100vh;
     padding: 50px 0;
     background-color: $silver;
-    overflow: hidden;
-    position: relative;
+    // overflow: hidden;
+    // position: relative;
+    background-image: url('../images/besocial_cat_5.svg');
+    background-repeat: no-repeat;
+    // background-position: -21% 167%;
+    // background-size: 595px 500px;
+    // background-size: 80% 70%;
+    background-position: -325% 137%;
+    background-size: 90% 76%;
+    // &::before {
+        
+    //     content: "";
+    //     position: absolute;
+    //     // bottom: -60%;
+    //     // left: -15%;
+    //     bottom: -13%;
+    //     left: -3%;
+    //     // height: 595px;
+    //     // width: 500px;
 
-    &::before {
-        content: "";
-        position: absolute;
-        // bottom: -60%;
-        // left: -15%;
-        bottom: -13%;
-        left: -3%;
-        height: 595px;
-        width: 500px;
-        background-image: url('../images/besocial_cat_5.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
+    // }
 
     &__logo {
         width: 220px;

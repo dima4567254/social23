@@ -10,6 +10,13 @@ $(function name(params) {
         });
     });
 
+    $('.menu__btn').on('click', function () {
+        $('.menu__items').toggleClass('menu__items--active');
+    
+        /*$('.header__logo').toggleClass('menu__list--active');
+        $('.intro__btn').toggleClass('menu__list--active');*/
+    });
+
     // $('.price__link').on('click', function () {
     //     $(this).next().slideToggle();
     //     $(this).toggleClass('active-modal');
@@ -163,3 +170,4 @@ modalWindow3.addEventListener('click', (e) => {
 //         }
 //     });
 // });
+// кнопка для адаптива
