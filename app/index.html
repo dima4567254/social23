@@ -14,13 +14,16 @@
 
 <!--
 поставить везде лин хейдж
-
+сделать скрол к разделам и меню
 ламп кламп
-
+переименовать правильно картинки
 проверить фокусі и валидатор
 потом проверить все своиства в ксс
 
+проблема с телеграмом на 568
+
 в райсе картинки на баграунте а в модал имг
+спорно делать ли лого имг или sвг скорей всего svg
 спорно титулы в модал должны быть h3 или h4
 -->
 
@@ -30,30 +33,31 @@
             <nav class="menu ">
                 <a class="menu__logo-link" href="#">
                     <img class="menu__logo logo" src="images/logo.svg" alt="logo">
+                    <img class="menu__small logo" src="images/logo-small.svg" alt="logo">
                 </a>
                 <ul class="menu__items">
-                    <li class="menu__item">
-                        <a class="menu__link menu__link--active" href="#">
+                    <li class="menu__item active-menu">
+                        <a class="menu__link menu__link--active" href="#income">
                             Кто мы?
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#service">
+                        <a class="menu__link" href="#terms">
                             Почему мы?
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#collections">
+                        <a class="menu__link" href="#price">
                             Вакансии
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#price">
+                        <a class="menu__link" href="#contacts">
                             Хочу к вам!
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#products">
+                        <a class="menu__link" href="#footer">
                             Контакты
                         </a>
                     </li>
@@ -105,8 +109,8 @@
                 </div>
             </div>
         </section>
-       <!-- 
-        <section class="income">
+
+        <section class="income" id="income">
             <div class="container">
                 <div class="income__wraper">
                     <div class="income__item">
@@ -163,10 +167,8 @@
                 </div>
             </div>
         </section>
-         
-    -->
-   
-        <section class="terms">
+
+        <section class="terms" id="terms">
             <div class="container">
                 <h2 class="terms__title">
                     Быть в нашей команде интересно и перспективно
@@ -229,7 +231,7 @@
                 </ul>
             </div>
         </section>
- 
+
         <section class="schedule">
             <div class="container container--sr">
                 <h2 class="schedule__title title">
@@ -323,7 +325,7 @@
                 </ul>
             </div>
         </section>
-       
+
         <section class="price" id="price">
             <div class="container">
                 <h2 class="price__title title">
@@ -576,7 +578,7 @@
             </div>
         </section>
 
-        <section class="contacts">
+        <section class="contacts" id="contacts">
             <div class="contacts__inner">
                 <div class="contacts__box">
                     <form class="form">
@@ -616,18 +618,18 @@
                     </form>
                 </div>
             </div>
-        </section> 
+        </section>
     </main>
-<!---->
-    <!-- <footer class="footer">
+
+    <footer class="footer" id="footer">
         <div class="container">
             <div class="footer__wrapper">
                 <div class="footer__item">
                     <a class="footer__logo-link" href="#">
-                        <img class="footer__logo logo" src="images/besocial_logotype_wh.svg" alt="logo">
+                        <img class="footer__logo logo" src="images/logo-small-white.svg" alt="logo">
                     </a>
                 </div>
-                <div class="footer__box">
+                <div class="footer__box footer__item">
                     <div class="footer__info">
                         <a class="footer__link" href="tel:+0502038079">+38 (050) 203-80-79</a>
                         <span>| Vodafone</span>
@@ -635,7 +637,7 @@
                     <a class="footer__link" href="tel:+380951024713">+38 (095) 102-47-13</a>
                 </div>
 
-                <div class="footer__item">
+                <div class="footer__item footer__item--item">
                     <div class="footer__text">
                         <p>
                             Написать в мессенджерах:
@@ -660,7 +662,7 @@
                 </div>
             </div>
         </div>
-    </footer>  -->
+    </footer> 
 
     <script src="js/main.min.js"></script>
 </body>

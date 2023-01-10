@@ -90,10 +90,20 @@ body {
     background-size: cover;
 }
 
+.active-menu {
+    border-bottom: 1px solid $hover;
+    box-shadow: inset 0px -1px 0px 0px #ffb71b;
+    color: $hover;
+}
+
 .active-modal {
     display: flex;
-
 }
+
+// .footer-item--item {
+
+//     
+// }
 
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});

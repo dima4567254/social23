@@ -2,7 +2,7 @@ $(function name(params) {
     // для того чтобы плейсхолдер гас когда нажимаешь
     $(document).ready(function () {
         $('input,textarea').focus(function () {
-            $(this).data('placeholder', $(this).attr('placeholder'))
+            $(this).data('placeholder', $(this).attr('placeholder'));
             $(this).attr('placeholder', '');
         });
         $('input,textarea').blur(function () {
@@ -12,11 +12,17 @@ $(function name(params) {
 
     $('.menu__btn').on('click', function () {
         $('.menu__items').toggleClass('menu__items--active');
-    
+
         /*$('.header__logo').toggleClass('menu__list--active');
         $('.intro__btn').toggleClass('menu__list--active');*/
     });
 
+    $(".menu a").on("click", function (event) {
+        event.preventDefault();
+        var id = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({ scrollTop: top }, 1500);
+    });
     // $('.price__link').on('click', function () {
     //     $(this).next().slideToggle();
     //     $(this).toggleClass('active-modal');
@@ -159,15 +165,23 @@ modalWindow3.addEventListener('click', (e) => {
     /*добовляем класс*/
 });
 // скрипт который убирает полосу при скроле
-// $(function () {
-//     let header = $('.menu');
+$(function () {
+    let header = $('.header');
 
-//     $(window).scroll(function () {
-//         if ($(this).scrollTop() > 1) {
-//             header.addClass('header-fixed');
-//         } else {
-//             header.removeClass('header-fixed');
-//         }
-//     });
-// });
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 690) {
+            header.addClass('header-fixed');
+        } else {
+            header.removeClass('header-fixed');
+        }
+    });
+
+    // $(window).scroll(function () {
+    //     if ($(this).scrollTop() > 690) {
+    //         header.addClass('active-menu');
+    //     } else {
+    //         header.removeClass('.active-menu');
+    //     }
+    // });
+});
 // кнопка для адаптива

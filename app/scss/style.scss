@@ -23,6 +23,10 @@
         z-index: 200;
     }
 
+    &__small {
+        display: none;
+    }
+
     &__items {
         display: flex;
         align-items: center;
@@ -87,7 +91,7 @@
         }
 
         &:active {
-            color: $active;
+            color: $hover;
         }
     }
 
@@ -222,8 +226,11 @@
             // padding: 50px 0 50px 0;
             // background-size: 100% 135%;
             // background-size: 67% 126%;
-            background-size: 100% 126%;
-            background-position: 50% -13%;
+            // background-size: 100% 126%;
+            // background-position: 50% -13%;
+            background-size: 50% 50%;
+            background-position: 50% 79%;
+            // переделать
         }
     }
 
@@ -275,32 +282,56 @@
     height: 100vh;
     padding: 50px 0;
     background-color: $silver;
-    // overflow: hidden;
-    // position: relative;
-    background-image: url('../images/besocial_cat_5.svg');
-    background-repeat: no-repeat;
-    // background-position: -21% 167%;
-    // background-size: 595px 500px;
-    // background-size: 80% 70%;
-    background-position: -325% 137%;
-    background-size: 90% 76%;
-    // &::before {
+    overflow: hidden;
+    position: relative;
+    // height: 100%;
 
-    //     content: "";
-    //     position: absolute;
-    //     // bottom: -60%;
-    //     // left: -15%;
-    //     bottom: -13%;
-    //     left: -3%;
-    //     // height: 595px;
-    //     // width: 500px;
+    @media (max-width: 992px) {
+        padding: 40px 0;
+    }
 
-    // }
+    @media (max-width: 576px) {
+        padding: 30px 0;
+    }
+
+    &::before {
+
+        content: "";
+        position: absolute;
+
+        bottom: -13%;
+        left: -80px;
+
+        background-image: url('../images/besocial_cat_5.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 585px;
+        width: 490px;
+
+        @media (max-width: 1200px) {
+            background-image: none;
+        }
+    }
 
     &__logo {
         width: 220px;
         height: 105px;
         object-fit: cover;
+
+        @media (max-width: 1200px) {
+            // margin-bottom: 30px;
+            margin: 0px 30px 30px 0px;
+        }
+
+        @media (max-width: 768px) {
+            // margin-bottom: 30px;
+            margin: 0px 20px 20px 0px;
+        }
+
+        @media (max-width: 576px) {
+            width: 140px;
+            height: 65px;
+        }
     }
 
     &__svg {
@@ -310,6 +341,11 @@
     &__wraper {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media (max-width: 1200px) {
+            justify-content: flex-start;
+        }
 
     }
 
@@ -320,39 +356,79 @@
 
     &__text {
         color: $black3;
-        font-size: 19px;
+        // font-size: 19px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 80px;
+        font-size: 22px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
     }
 
     &__text p {
         max-width: 350px;
+
+        @media (max-width: 768px) {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+        }
 
         &:not(:last-child) {
             margin-right: 30px;
         }
     }
 
-    &__box {}
+    &__box {
+        // max-width: 720px;
+    }
 }
 
 .statistics {
     &__items {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media (max-width: 576px) {
+            // justify-content: start;
+            display: block;
+        }
     }
 
     &__item {
         color: $hover;
         font-size: 72px;
         font-weight: 700;
+        margin-right: 20px;
+
+        @media (max-width: 992px) {
+            font-size: 56px;
+        }
+
+        @media (max-width: 768px) {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            font-size: 46px;
+        }
     }
 
     &__text {
         color: $black2;
         font-size: 20px;
+
+        @media (max-width: 576px) {
+            font-size: 16px;
+        }
     }
 }
 
@@ -751,7 +827,7 @@
 }
 
 .contacts {
-    height: 100vh;
+    // height: 100vh;
     position: relative;
 
     &::before {
@@ -768,15 +844,15 @@
         width: 50%;
 
         @media (max-width: 768px) {
-            width: 100%;
-            // bottom: -16%;
-            // background-position: 0px 50%;
-            // background-size: 100% 100%;
-            bottom: -100%;
-            background-position: center;
-            // background-size: 100% 78%;
-            top: inherit;
-
+            // width: 100%;
+            // // bottom: -16%;
+            // // background-position: 0px 50%;
+            // // background-size: 100% 100%;
+            // bottom: -97%;
+            // background-position: center;
+            // // background-size: 100% 78%;
+            // top: inherit;
+            background-image: none;
         }
     }
 
@@ -793,24 +869,19 @@
 
     &__box {
         background-color: $silver;
-        padding: 60px;
+        padding: 50px;
         width: 50%;
-
-        @media (max-width: 1200px) {
-            padding: 50px;
-        }
 
         @media (max-width: 992px) {
             padding: 40px;
         }
 
         @media (max-width: 768px) {
-            padding: 30px;
             width: 100%;
         }
 
         @media (max-width: 576px) {
-            padding: 20px;
+            padding: 30px 15px;
         }
     }
 }
@@ -839,6 +910,7 @@
         border-top: none;
         border-bottom: 100%;
         margin-bottom: 20px;
+        // проверить нужеен ли ласт чайлд
         background-color: transparent;
         outline: none;
         padding: 20px 0px;
@@ -867,9 +939,19 @@
     padding: 50px 50px 50px 0px;
     color: $white;
 
+    @media (max-width: 992px) {
+        padding: 40px;
+    }
+
+    @media (max-width: 576px) {
+        padding: 30px 0;
+    }
+
     &__wrapper {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px 20px;
     }
 
     &__info {
@@ -899,6 +981,8 @@
             // height: 50px;
             // background-color: $hover;
             // border-radius: 50%;
+            // padding-top: 40px;
+            // padding-bottom: 40px;
             position: relative;
 
             &::before {
@@ -917,6 +1001,22 @@
         }
     }
 
+    &__item {
+
+        &--item {
+            @media (max-width: 576px) {
+                padding-bottom: 50px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            // padding-bottom: 60px;
+            margin-bottom: 20px;
+            // width: 100%;
+            // возможно надо сдлеать 100 ширены !!!
+        }
+    }
+
     &__logo {
         width: 180px;
         height: 28px;
@@ -925,9 +1025,6 @@
     &__text {
         max-width: 135px;
         font-weight: 400;
-        margin-bottom: 10px;
-
-
 
         &:not(:last-child) {
             margin-bottom: 10px;
@@ -1141,20 +1238,25 @@
     }
 }
 
-// .header-fixed {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     z-index: 999;
-//     background-color: transparent;
-//     display: flex;
-//     justify-content: space-between;
-//     background-color: white;
-//     // max-width: 1200px;
-//     // margin: 0 auto;
-//     // padding: 0 15px;
-// }
+.header-fixed {
+    position: fixed;
+    padding: 13px 0;
+    background-color: $silver;
+
+    .menu {
+        padding-top: 0;
+    }
+
+    .menu__logo {
+        display: none;
+    }
+
+    .menu__small {
+        display: block;
+        width: 150px;
+        height: 25px;
+    }
+}
 
 .active-modal {
     display: flex;
