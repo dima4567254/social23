@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="https://yoursite.ru/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
     <title>Social</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -14,18 +14,24 @@
 
 <!--
 поставить везде лин хейдж
-сделать скрол к разделам и меню
 ламп кламп
+
 переименовать правильно картинки
+
 проверить фокусі и валидатор
 потом проверить все своиства в ксс
 
 проблема с телеграмом на 568
+в меню не првильно подчеркивается
 
+2 блок плохо віглядит может совсем убрать картинку или как то по другому
 в райсе картинки на баграунте а в модал имг
+
 спорно делать ли лого имг или sвг скорей всего svg
 спорно титулы в модал должны быть h3 или h4
--->
+
+493 удалить потом модификаторі -->
+
 
 <body>
     <header class="header">
@@ -36,8 +42,8 @@
                     <img class="menu__small logo" src="images/logo-small.svg" alt="logo">
                 </a>
                 <ul class="menu__items">
-                    <li class="menu__item active-menu">
-                        <a class="menu__link menu__link--active" href="#income">
+                    <li class="menu__item active">
+                        <a class="menu__link" href="#income">
                             Кто мы?
                         </a>
                     </li>
@@ -539,21 +545,16 @@
                                     </label>
                                     <input class="modal__input" id="leader-name" type="text" name="name"
                                         placeholder="Том" required>
-
-
                                     <label class="modal__label" for="leader-tel">
                                         Твой телефон
                                     </label>
-
                                     <input class="modal__input modal__input--tel" id="leader-tel" type="tel" name="tel"
                                         placeholder="+99 (099) 99999999" required>
-
                                     <label class="modal__label" for="leader-email">
                                         Твой e-mail
                                     </label>
                                     <input class="modal__input" id="leader-email" type="email" name="email"
                                         placeholder="kitty@site.com" required>
-
                                     <label class="modal__label" for="leader-city">
                                         С какого ты города?
                                     </label>

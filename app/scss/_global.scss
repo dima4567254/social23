@@ -84,16 +84,22 @@ body {
     display: none;
 }
 
-.active {
-    background-image: url('../images/caret_down.svg');
-    background-position: right;
-    background-size: cover;
-}
+// .active {
+//     background-image: url('../images/caret_down.svg');
+//     background-position: right;
+//     background-size: cover;
+// }
 
-.active-menu {
+.active {
     border-bottom: 1px solid $hover;
     box-shadow: inset 0px -1px 0px 0px #ffb71b;
     color: $hover;
+
+    @media (max-width: 992px) {
+        border-bottom: none;
+        box-shadow: none;
+        color: inherit;
+    }
 }
 
 .active-modal {

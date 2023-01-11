@@ -211,7 +211,7 @@
 
         @media (max-width: 992px) {
             background-size: 40% 50%;
-            padding: 50px 0;
+            padding: 40px 0;
             // padding: 0px 0;
             align-items: flex-start;
             background-position: 50% 90%;
@@ -228,12 +228,12 @@
             // background-size: 67% 126%;
             // background-size: 100% 126%;
             // background-position: 50% -13%;
+            padding: 30px 0;
             background-size: 50% 50%;
             background-position: 50% 79%;
             // переделать
         }
     }
-
 
     &__box {
         max-width: 500px;
@@ -835,7 +835,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-image: url('../images/besocial_illustratio.svg');
+        background-image: url('../images/collection-of-cats');
         background-repeat: no-repeat;
         background-position: center;
         // background-size: auto 950px;
@@ -1010,8 +1010,12 @@
         }
 
         @media (max-width: 576px) {
+
             // padding-bottom: 60px;
-            margin-bottom: 20px;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
             // width: 100%;
             // возможно надо сдлеать 100 ширены !!!
         }
