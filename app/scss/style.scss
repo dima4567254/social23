@@ -32,14 +32,12 @@
         align-items: center;
 
         @media (max-width: 992px) {
-            // display: none;
             transform: translateY(-200%);
             position: absolute;
             top: 0px;
             left: 0;
             width: 100%;
             flex-direction: column;
-            // align-items: center;
             z-index: 5;
             background-color: $silver2;
             transition: transform 1s;
@@ -78,7 +76,6 @@
         outline-offset: 5px;
 
         @media (max-width: 992px) {
-            // z-index: 200;
             display: block;
         }
 
@@ -99,8 +96,6 @@
         display: none;
 
         @media (max-width: 992px) {
-            // display: block;
-            // order: 1;
             margin-left: 40px;
             width: 30px;
             height: 22px;
@@ -125,7 +120,7 @@
                 content: '';
                 height: 3px;
                 width: 100%;
-                background-color: #000000;
+                background-color: $black;
             }
 
             &::before {
@@ -138,8 +133,21 @@
             }
         }
     }
-}
 
+    .menu__btn.menu__items--active span {
+        transform: scale(0);
+    }
+
+    .menu__btn.menu__items--active:before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .menu__btn.menu__items--active::after {
+        transform: rotate(-45deg);
+        bottom: 10px;
+    }
+}
 
 .intro {
     height: 100vh;
@@ -148,8 +156,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-image: url('../images/icons/cats.svg');
-
+    
     @media (max-width: 992px) {
         background-position: left;
     }
@@ -197,7 +204,7 @@
         padding: 220px 0;
         display: flex;
         align-items: center;
-        background-image: url('../images/icons/besocial_cat_4_2.svg');
+        background-image: url('../images/besocial_cat_4_2.svg');
         background-repeat: no-repeat;
         background-position: right center;
         background-size: 559px 779px;
@@ -212,26 +219,15 @@
         @media (max-width: 992px) {
             background-size: 40% 50%;
             padding: 40px 0;
-            // padding: 0px 0;
             align-items: flex-start;
             background-position: 50% 90%;
             justify-content: center;
         }
 
-        @media (max-width: 768px) {
-            // padding: 110px 0;
-        }
-
         @media (max-width: 576px) {
-            // padding: 50px 0 50px 0;
-            // background-size: 100% 135%;
-            // background-size: 67% 126%;
-            // background-size: 100% 126%;
-            // background-position: 50% -13%;
             padding: 30px 0;
-            background-size: 50% 50%;
-            background-position: 50% 79%;
-            // переделать
+            background-size: 300px 500px;
+            background-position: 50% 97%;
         }
     }
 
@@ -268,14 +264,10 @@
             font-size: 20px;
         }
 
-        @media (max-width: 768px) {}
-
         @media (max-width: 576px) {
             font-size: 18px;
         }
     }
-
-    &__img {}
 }
 
 .income {
@@ -284,7 +276,6 @@
     background-color: $silver;
     overflow: hidden;
     position: relative;
-    // height: 100%;
 
     @media (max-width: 992px) {
         padding: 40px 0;
@@ -295,14 +286,11 @@
     }
 
     &::before {
-
         content: "";
         position: absolute;
-
         bottom: -13%;
         left: -80px;
-
-        background-image: url('../images/besocial_cat_5.svg');
+        background-image: url('../images/cat-with-tongue.svg');
         background-repeat: no-repeat;
         background-position: center;
         height: 585px;

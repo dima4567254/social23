@@ -9,113 +9,11 @@ $(function name(params) {
             $(this).attr('placeholder', $(this).data('placeholder'));
         });
     });
-
+    // ------------------------------
     $('.menu__btn').on('click', function () {
-        $('.menu__items').toggleClass('menu__items--active');
-
-        /*$('.header__logo').toggleClass('menu__list--active');
-        $('.intro__btn').toggleClass('menu__list--active');*/
+        $('.menu__btn,.menu__items').toggleClass('menu__items--active');
+        // для крестика и для меню
     });
-
-    $(".menu a").on("click", function (event) {
-        event.preventDefault();
-        var id = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({ scrollTop: top }, 1500);
-    });
-    // $('.price__link').on('click', function () {
-    //     $(this).next().slideToggle();
-    //     $(this).toggleClass('active-modal');
-    // });
-
-    // $('.modal__button').on('click', function () {
-    //     $(this).next().slideToggle();
-    //     $(this).toggleClass('close');
-    // });
-
-
-
-
-    // $('.modal__button').on('click', function () {
-    //     $('modal').toggleClass('close');
-
-    //     /*$('.header__logo').toggleClass('menu__list--active');
-    //     $('.intro__btn').toggleClass('menu__list--active');*/
-    // });
-
-
-
-
-    (function () {
-        if (typeof WebFont != 'undefined') {
-            WebFontConfig = {
-                custom: {
-                    families: ['Montserrat']
-                },
-                active: function () {
-                    $('select, :checkbox, :radio').trigger('refresh');
-                }
-            };
-            WebFont.load(WebFontConfig);
-        }
-    })();
-
-    // проверить нужно ли
-    setTimeout(function () {
-        $('select,filter-selects__sort').styler();
-    }, 100)
-
-
-    /*	$(".menu a").on("click", function (event) {
-            event.preventDefault();
-            var id = $(this).attr('href'),
-                top = $(id).offset().top;
-            $('body,html').animate({
-                scrollTop: top
-            }, 1500);
-        });
-
-        /*для закрыть меню*/
-    /*
-              $('.menu__btn').on('click', function () {
-                  $('.menu__items').toggleClass('menu__items--active');
-              });
-              $('.menu__btn').on('click', function () {
-                  $('.menu__btn').toggleClass('active');
-              });
-           
-            $('.home__slider').slick({
-                dots: true,
-                arrows: false,
-                 responsive: [
-
-
-                     {
-                         breakpoint: 1150,
-                         settings: {
-                             slidesToShow: 4,
-                         }
-                     },
-                     {
-                         breakpoint: 1000,
-                         settings: {
-                             slidesToShow: 3,
-                         }
-                     },
-                     {
-                         breakpoint: 620,
-                         settings: {
-                             slidesToShow: 2,
-                             slidesToScroll: 2,
-                         }
-                     },
-                 ]
-            });
-           
-           
-           */
-
-
 });
 
 /*открывать форму*/
@@ -164,6 +62,7 @@ modalWindow3.addEventListener('click', (e) => {
     }
     /*добовляем класс*/
 });
+// ---------------------------------------------
 // скрипт который убирает полосу при скроле
 $(function () {
     let header = $('.header');
@@ -175,13 +74,14 @@ $(function () {
             header.removeClass('header-fixed');
         }
     });
-
-    // $(window).scroll(function () {
-    //     if ($(this).scrollTop() > 690) {
-    //         header.addClass('active-menu');
-    //     } else {
-    //         header.removeClass('.active-menu');
-    //     }
-    // });
 });
+// ---------------------------------------------
+// для плавного скрола
+$(".menu a").on("click", function (event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({ scrollTop: top }, 1500);
+});
+
 // кнопка для адаптива
