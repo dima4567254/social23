@@ -689,6 +689,14 @@
         height: 100%;
     }
 
+    @media (max-width: 992px) {
+        padding: 40px 0px;
+    }
+
+    @media (max-width: 576px) {
+        padding: 20px 0px;
+    }
+
     &__title {
         margin-bottom: 30px;
 
@@ -739,42 +747,43 @@
     }
 
     &__item {
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+        // background-repeat: no-repeat;
+        // background-position: center;
+        // background-size: cover;
         // display: flex;
+        position: relative;
 
         @media (max-width: 576px) {
             // background-position: center 31px;
         }
     }
 
-    &__link {
+    &__img {
         min-height: 680px;
-        padding: 30px;
         max-width: 360px;
+        object-fit: cover;
+
+        @media (max-width: 576px) {
+            width: 320px;
+            // padding: 20px;
+        }
+    }
+
+    &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-height: 680px;
+        //min-height для работі маржин батом
+        padding: 30px;
         display: flex;
-        // position: relative;
         background-color: transparent;
         transition: color 0.5s;
         border: none;
         color: $white;
 
         @media (max-width: 576px) {
-            width: 320px;
             padding: 20px;
-        }
-
-        &--operator {
-            background-image: url('../images/operator.svg');
-        }
-
-        &--leader {
-            background-image: url('../images/leader.svg');
-        }
-
-        &--scout {
-            background-image: url('../images/scout.svg');
         }
 
         &:focus {
