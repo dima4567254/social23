@@ -79,19 +79,9 @@ body {
     }
 }
 
-.close {
-    display: none;
-}
-
-// .active {
-//     background-image: url('../images/caret_down.svg');
-//     background-position: right;
-//     background-size: cover;
-// }
-
 .active {
     border-bottom: 1px solid $hover;
-    box-shadow: inset 0px -1px 0px 0px #ffb71b;
+    box-shadow: inset 0px -1px 0px 0px $hover;
     color: $hover;
 
     @media (max-width: 992px) {
@@ -105,26 +95,3 @@ body {
     display: flex;
 }
 
-// .footer-item--item {
-
-//     
-// }
-
-@function max($numbers...) {
-    @return m#{a}x(#{$numbers});
-}
-
-@function min($numbers...) {
-    @return m#{i}n(#{$numbers});
-}
-
-
-// @media (max-width: 1800px) {}
-
-// @media (max-width: 1200px) {}
-
-// @media (max-width: 992px) {}
-
-// @media (max-width: 768) {}
-
-// @media (max-width: 576px) {}
