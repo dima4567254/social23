@@ -123,9 +123,9 @@ const modalWindow = document.querySelector('.modal');
 const modalWindow2 = document.querySelector('.modal--scout');
 const modalWindow3 = document.querySelector('.modal--leader');
 
-const buttonModal = document.querySelector('.price__button--operator');
-const buttonModal2 = document.querySelector('.price__button--scout');
-const buttonModal3 = document.querySelector('.price__button--leader');
+const buttonModal = document.querySelector('.price__link--operator');
+const buttonModal2 = document.querySelector('.price__link--scout');
+const buttonModal3 = document.querySelector('.price__link--leader');
 
 /*addEventListenerпрослушиватель событий по нажатию левой кнопкой мышы*/
 buttonModal.addEventListener('click', () => {

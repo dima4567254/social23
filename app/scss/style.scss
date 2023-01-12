@@ -742,25 +742,14 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        // display: flex;
 
         @media (max-width: 576px) {
             // background-position: center 31px;
         }
-
-        &--operator {
-            background-image: url('../images/operator.svg');
-        }
-
-        &--leader {
-            background-image: url('../images/leader.svg');
-        }
-
-        &--scout {
-            background-image: url('../images/scout.svg');
-        }
     }
 
-    &__button {
+    &__link {
         min-height: 680px;
         padding: 30px;
         max-width: 360px;
@@ -774,6 +763,18 @@
         @media (max-width: 576px) {
             width: 320px;
             padding: 20px;
+        }
+
+        &--operator {
+            background-image: url('../images/operator.svg');
+        }
+
+        &--leader {
+            background-image: url('../images/leader.svg');
+        }
+
+        &--scout {
+            background-image: url('../images/scout.svg');
         }
 
         &:focus {
@@ -835,7 +836,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-image: url('../images/collection-of-cats');
+        background-image: url('../images/collection-of-cats.svg');
         background-repeat: no-repeat;
         background-position: center;
         // background-size: auto 950px;
