@@ -221,8 +221,8 @@
 
         @media (max-width: 576px) {
             padding: 30px 0;
-            background-size: 300px 500px;
-            background-position: 50% 97%;
+            background-size: 300px 385px;
+            background-position: 50% 90%;
         }
     }
 
@@ -271,8 +271,13 @@
     background-color: $silver;
     overflow: hidden;
     position: relative;
-    // display: flex;
-    // align-items: center;
+    margin-top: 50px;
+    // !!!
+
+    @media (max-width: 1200px) {
+        display: flex;
+        align-items: center;
+    }
 
     @media (max-width: 992px) {
         padding: 40px 0;
@@ -280,6 +285,8 @@
 
     @media (max-width: 576px) {
         padding: 30px 0;
+        height: 100%;
+        margin-top: 80px;
     }
 
     &::before {
@@ -413,11 +420,14 @@
     padding: 50px 0;
     background-color: $violet;
     color: $white;
-    // display: flex;
-    // align-items: center;
+    margin-top: 50px;
+    // !!!
+
 
     @media (max-width: 1200px) {
         height: 100%;
+        display: flex;
+        align-items: center;
     }
 
     @media (max-width: 992px) {
@@ -426,6 +436,7 @@
 
     @media (max-width: 576px) {
         padding: 30px 0;
+        margin-top: 80px;
     }
 
     &__title {
@@ -561,8 +572,11 @@
     padding: 50px 0px;
     background-color: $silver;
     text-align: center;
-    // display: flex;
-    // align-items: center;
+
+    @media (max-width: 1200px) {
+        display: flex;
+        align-items: center;
+    }
 
     @media (max-width: 992px) {
         height: 100%;
@@ -685,6 +699,7 @@
     min-height: 850px;
     height: 100vh;
     padding: 50px 0px;
+    margin-top: 50px;
 
     @media (max-width: 1200px) {
         height: 100%;
@@ -692,10 +707,12 @@
 
     @media (max-width: 992px) {
         padding: 40px 0px;
+        margin-top: 80px;
     }
 
     @media (max-width: 576px) {
         padding: 20px 0px;
+        margin-top: 80px;
     }
 
     &__title {
@@ -829,9 +846,21 @@
     }
 }
 
+
+
 .contacts {
     position: relative;
+    margin-top: 50px;
 
+    @media (max-width: 992px) {
+        margin-top: 60px;
+    }
+
+    @media (max-width: 576px) {
+        margin-top: 80px;
+    }
+
+    // !!!
     &::before {
         content: "";
         position: absolute;
@@ -1072,6 +1101,8 @@
     }
 }
 
+// 366 скролл
+// 320 не влазит
 .modal {
     z-index: 200;
     position: fixed;
@@ -1086,20 +1117,60 @@
     display: none;
     font-weight: 400;
     line-height: 1.5;
+    // position: relative;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 2%;
-        right: 2%;
-        height: 30px;
+    &__btn {
         width: 30px;
-        background-image: url('../images/icons/cross.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        cursor: pointer;
+        height: 22px;
+        position: relative;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        z-index: 10;
+        margin: 20px 20px 0px auto;
+
+        span {
+            height: 3px;
+            width: 100%;
+            background-color: $black;
+            transform: scale(0);
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            height: 3px;
+            width: 100%;
+            // поменять!!!
+            left: 0;
+            background-color: $black;
+        }
+
+        &::before {
+            content: '';
+            transform: rotate(45deg);
+            top: 9px;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+            bottom: 10px;
+        }
+
         transition: color 0.5s;
+
+        &:focus {
+            color: $focus;
+        }
+
+        &:hover {
+            opacity: 0.5;
+        }
+
+        &:active {
+            color: $active;
+        }
     }
 
     &__inner {
