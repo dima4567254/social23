@@ -271,8 +271,8 @@
     background-color: $silver;
     overflow: hidden;
     position: relative;
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
 
     @media (max-width: 992px) {
         padding: 40px 0;
@@ -413,8 +413,8 @@
     padding: 50px 0;
     background-color: $violet;
     color: $white;
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
 
     @media (max-width: 1200px) {
         height: 100%;
@@ -561,12 +561,12 @@
     padding: 50px 0px;
     background-color: $silver;
     text-align: center;
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
 
-    // @media (max-width: 1200px) {
-    //     height: 100%;
-    // }
+    @media (max-width: 992px) {
+        height: 100%;
+    }
 
     @media (max-width: 992px) {
         padding: 40px 0px;
