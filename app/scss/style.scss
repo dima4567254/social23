@@ -271,7 +271,7 @@
     background-color: $silver;
     overflow: hidden;
     position: relative;
-    margin-top: 50px;
+    // margin-top: 50px;
     // !!!
 
     @media (max-width: 1200px) {
@@ -279,14 +279,14 @@
         align-items: center;
     }
 
-    @media (max-width: 992px) {
-        padding: 40px 0;
-    }
+    // @media (max-width: 992px) {
+    //     padding: 40px 0;
+    // }
 
     @media (max-width: 576px) {
-        padding: 30px 0;
+        // padding: 30px 0;
         height: 100%;
-        margin-top: 80px;
+        // margin-top: 80px;
     }
 
     &::before {
@@ -420,8 +420,8 @@
     padding: 50px 0;
     background-color: $violet;
     color: $white;
-    margin-top: 50px;
-    // !!!
+    // margin-top: 50px;
+    // !!
 
 
     @media (max-width: 1200px) {
@@ -430,14 +430,15 @@
         align-items: center;
     }
 
-    @media (max-width: 992px) {
-        padding: 40px 0;
-    }
+    // @media (max-width: 992px) {
+    //     // padding: 40px 0;
+    //     // padding: 50px 0px 40px 0px;
+    // }
 
-    @media (max-width: 576px) {
-        padding: 30px 0;
-        margin-top: 80px;
-    }
+    // @media (max-width: 576px) {
+    //     padding: 30px 0;
+    //     margin-top: 80px;
+    // }
 
     &__title {
         font-size: 40px;
@@ -582,13 +583,13 @@
         height: 100%;
     }
 
-    @media (max-width: 992px) {
-        padding: 40px 0px;
-    }
+    // @media (max-width: 992px) {
+    //     padding: 40px 0px;
+    // }
 
-    @media (max-width: 576px) {
-        padding: 30px 0px;
-    }
+    // @media (max-width: 576px) {
+    //     padding: 30px 0px;
+    // }
 
     &__title {
         margin-bottom: 30px;
@@ -625,7 +626,8 @@
     }
 
     &__item {
-        width: 300px;
+        max-width: 300px;
+        width: 100%;
         padding: 30px;
         color: $white;
         position: relative;
@@ -699,20 +701,20 @@
     min-height: 850px;
     height: 100vh;
     padding: 50px 0px;
-    margin-top: 50px;
+    // margin-top: 50px;
 
     @media (max-width: 1200px) {
         height: 100%;
     }
 
-    @media (max-width: 992px) {
-        padding: 40px 0px;
-        margin-top: 80px;
-    }
+    // @media (max-width: 992px) {
+    //     padding: 50px 0px 40px 0px;
+    //     margin-top: 80px;
+    // }
 
     @media (max-width: 576px) {
-        padding: 20px 0px;
-        margin-top: 80px;
+        // padding: 20px 0px;
+        // margin-top: 80px;
     }
 
     &__title {
@@ -781,7 +783,7 @@
         object-fit: cover;
 
         @media (max-width: 576px) {
-            width: 320px;
+            max-width: 300px;
         }
     }
 
@@ -846,19 +848,18 @@
     }
 }
 
-
-
 .contacts {
     position: relative;
-    margin-top: 50px;
+    // padding: 50px 0;
+    // margin-top: 50px;
 
-    @media (max-width: 992px) {
-        margin-top: 60px;
-    }
+    // @media (max-width: 992px) {
+    //     margin-top: 60px;
+    // }
 
-    @media (max-width: 576px) {
-        margin-top: 80px;
-    }
+    // @media (max-width: 576px) {
+    //     margin-top: 80px;
+    // }
 
     // !!!
     &::before {
@@ -894,16 +895,16 @@
         padding: 50px;
         width: 50%;
 
-        @media (max-width: 992px) {
-            padding: 40px;
-        }
+        // @media (max-width: 992px) {
+        //     padding: 40px;
+        // }
 
         @media (max-width: 768px) {
             width: 100%;
         }
 
         @media (max-width: 576px) {
-            padding: 30px 15px;
+            padding: 50px 15px;
         }
     }
 }
@@ -1120,6 +1121,9 @@
     // position: relative;
 
     &__btn {
+        position: fixed;
+        top: 0px;
+        right: 15px;
         width: 30px;
         height: 22px;
         position: relative;
@@ -1127,11 +1131,12 @@
         background-color: transparent;
         padding: 0;
         z-index: 10;
-        margin: 20px 20px 0px auto;
+        // margin: 20px 20px 0px auto;
 
         span {
             height: 3px;
-            width: 100%;
+            width: 30px;
+            // width: 100%;
             background-color: $black;
             transform: scale(0);
         }
@@ -1141,7 +1146,8 @@
             position: absolute;
             content: '';
             height: 3px;
-            width: 100%;
+            width: 30px;
+            // width: 100%;
             // поменять!!!
             left: 0;
             background-color: $black;

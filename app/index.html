@@ -21,20 +21,23 @@
 проверить фокусі и валидатор
 потом проверить все своиства в ксс
 проверить на сколы
+удалить у нолей все px
 
 2 блок плохо віглядит может совсем убрать картинку или как то по другому
 спорно 2 блок контент или нет
-
-цвет в ховера в прайсе
 
 спорно делать ли лого имг или sвг скорей всего svg
 спорно титулы в модал должны быть h3 или h4
 спорно prise скорей всего сделан не правильно с точки зрения js и копирования 100 раз модальніх окон
 
-крест в модал пропал
 перевести на укр язык
 поменять цвета
 поменять местами блоки
+
+крестик маленький 
+проверить 2 блок 
+удалить все коментарии
+
 -->
 
 <body>
@@ -81,7 +84,7 @@
     </header>
 
     <main class="main">
-        <div class="intro" style="background-image: url('images/cats.svg');">
+       <div class="intro" style="background-image: url('images/cats.svg');">
             <h1 class="sr-only">
                 Cайт о работе в мастерской общения
             </h1>
@@ -537,6 +540,10 @@
                             </div>
                         </a>
                         <form class="modal modal--leader">
+                            <button class="modal__btn" type="button">
+                                <span></span>
+                                <span class="sr-only">закрыть модальное окно</span>
+                            </button>
                             <div class="modal__inner">
                                 <img class="modal__images" src="images/leader-c.svg" alt="Лидер">
                                 <div class="modal__box">
@@ -581,10 +588,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="modal__btn" type="button">
-                                <span></span>
-                                <span class="sr-only">закрыть модальное окно</span>
-                            </button>
+
                         </form>
                     </li>
                 </ul>
@@ -633,7 +637,7 @@
             </div>
         </section>
     </main>
-
+<!--
     <footer class="footer" id="footer">
         <div class="container">
             <div class="footer__wrapper">
@@ -674,7 +678,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <script src="js/main.min.js"></script>
 </body>
