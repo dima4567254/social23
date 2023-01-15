@@ -9,11 +9,16 @@ $(function name(params) {
             $(this).attr('placeholder', $(this).data('placeholder'));
         });
     });
+    
     // ------------------------------
-    $('.menu__btn').on('click', function () {
+    $('.menu__btn, .menu a').on('click', function () {
         $('.menu__btn,.menu__items').toggleClass('menu__items--active');
-        // для крестика и для меню
+        // для крестика и для меню и что бы закрывалось меню после выбора сcылки
     });
+    // $('.menu__btn, .menu a').on('click', function () {
+    //     $('.menu__btn,.menu__items').toggleClass('menu__items--active');
+    //     // для крестика и для меню и что бы закрывалось меню после выбора сcылки
+    // });
 });
 
 /*открывать форму*/
@@ -83,5 +88,7 @@ $(".menu a").on("click", function (event) {
         top = $(id).offset().top;
     $('body,html').animate({ scrollTop: top }, 1500);
 });
+
+
 
 // кнопка для адаптива
