@@ -348,14 +348,13 @@
     &__text p {
         max-width: 350px;
 
-        @media (max-width: 768px) {
-            &:not(:last-child) {
-                margin-bottom: 20px;
-            }
-        }
-
         &:not(:last-child) {
             margin-right: 30px;
+
+            @media (max-width: 768px) {
+                margin-bottom: 20px;
+
+            }
         }
     }
 }
@@ -407,6 +406,8 @@
     padding: 50px 0;
     background-color: $violet;
     color: $white;
+    display: grid;
+    align-items: center;
 
     @media (max-width: 1200px) {
         height: 100%;
@@ -543,6 +544,8 @@
     padding: 50px 0px;
     background-color: $silver;
     text-align: center;
+    display: grid;
+    align-items: center;
 
     @media (max-width: 1200px) {
         display: flex;
@@ -577,12 +580,17 @@
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 40px;
-        // grid-row-gap: 40px;
-        // grid-column-gap: 40px;
-        // grid-row-gap: 40px;
+
+        @media (max-width: 576px) {
+            gap: 20px;
+        }
 
         &:not(:last-child) {
             margin-bottom: 40px; // !!!тут надо было как то по другому
+
+            @media (max-width: 576px) {
+                margin-bottom: 20px;
+            }
         }
 
         @media (max-width: 1200px) {
@@ -666,7 +674,8 @@
     min-height: 850px;
     height: 100vh;
     padding: 50px 0px;
-    // margin-top: 50px;
+    display: grid;
+    align-items: center;
 
     @media (max-width: 1200px) {
         height: 100%;
@@ -757,7 +766,6 @@
         top: 0;
         left: 0;
         min-height: 680px;
-        //min-height для работі маржин батом
         padding: 30px;
         display: flex;
         background-color: transparent;
@@ -898,7 +906,6 @@
         border-top: none;
         border-bottom: 100%;
         margin-bottom: 20px;
-        // проверить нужеен ли ласт чайлд
         background-color: transparent;
         outline: none;
         padding: 20px 0px;
@@ -998,13 +1005,7 @@
         }
 
         @media (max-width: 576px) {
-
-            &:not(:last-child) {
-                margin-bottom: 20px;
-            }
-
-            // width: 100%;
-            // возможно надо сдлеать 100 ширены !!!
+            width: 100%;
         }
     }
 
@@ -1067,8 +1068,6 @@
     }
 }
 
-// 366 скролл
-// 320 не влазит
 .modal {
     z-index: 200;
     position: fixed;
@@ -1079,29 +1078,30 @@
     overflow-y: auto;
     overflow-x: hidden;
     display: flex;
-    backdrop-filter: blur(4rem);
+    backdrop-filter: blur(1rem);
     display: none;
     font-weight: 400;
     line-height: 1.5;
-    // position: relative;
+
 
     &__btn {
         position: fixed;
-        top: 0px;
-        right: 15px;
+        top: 10px;
+        right: 10px;
         width: 30px;
         height: 22px;
-        position: relative;
         border: none;
         background-color: transparent;
         padding: 0;
         z-index: 10;
-        // margin: 20px 20px 0px auto;
+
+        // @media (max-width: 768px) {
+        //     top: 20px;
+        // }
 
         span {
             height: 3px;
             width: 30px;
-            // width: 100%;
             background-color: $black;
             transform: scale(0);
         }
@@ -1112,8 +1112,6 @@
             content: '';
             height: 3px;
             width: 30px;
-            // width: 100%;
-            // поменять!!!
             left: 0;
             background-color: $black;
         }
@@ -1184,13 +1182,11 @@
 
         &::before {
             content: '';
-            // top: 0;
             top: 9px;
             transform: rotate(45deg);
         }
 
         &::after {
-            // bottom: 0;
             bottom: 10px;
             transform: rotate(-45deg);
         }

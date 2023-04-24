@@ -9,7 +9,7 @@ $(function name(params) {
             $(this).attr('placeholder', $(this).data('placeholder'));
         });
     });
-    
+
     // ------------------------------
     $('.menu__btn, .menu a').on('click', function () {
         $('.menu__btn,.menu__items').toggleClass('menu__items--active');
@@ -32,15 +32,32 @@ const buttonModal3 = document.querySelector('.price__link--leader');
 
 /*addEventListenerпрослушиватель событий по нажатию левой кнопкой мышы*/
 buttonModal.addEventListener('click', () => {
-    modalWindow.classList.add('active-modal'); /*добовляем класс*/
+    modalWindow.classList.add('active-modal');
+    document.onkeydown = function (event) {
+        if (event.keyCode == 27) {
+            modalWindow.classList.remove('active-modal');
+        }
+    } /*добовляем класс*/
 });
 
 buttonModal2.addEventListener('click', () => {
-    modalWindow2.classList.add('active-modal'); /*добовляем класс*/
+    modalWindow2.classList.add('active-modal');
+    document.onkeydown = function (event) {
+        if (event.keyCode == 27) {
+            modalWindow.classList.remove('active-modal');
+        }
+    }
+    /*добовляем класс*/
 });
 
 buttonModal3.addEventListener('click', () => {
-    modalWindow3.classList.add('active-modal'); /*добовляем класс*/
+    modalWindow3.classList.add('active-modal');
+    document.onkeydown = function (event) {
+        if (event.keyCode == 27) {
+            modalWindow.classList.remove('active-modal');
+        }
+    }
+    /*добовляем класс*/
 });
 
 /*закрытие окна*/
