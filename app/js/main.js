@@ -20,69 +20,30 @@ $(function name(params) {
     //     // для крестика и для меню и что бы закрывалось меню после выбора сcылки
     // });
 });
-
-/*открывать форму*/
-const modalWindow = document.querySelector('.modal');
-const modalWindow2 = document.querySelector('.modal--scout');
-const modalWindow3 = document.querySelector('.modal--leader');
-
-const buttonModal = document.querySelector('.price__link--operator');
-const buttonModal2 = document.querySelector('.price__link--scout');
-const buttonModal3 = document.querySelector('.price__link--leader');
-
-/*addEventListenerпрослушиватель событий по нажатию левой кнопкой мышы*/
-buttonModal.addEventListener('click', () => {
-    modalWindow.classList.add('active-modal');
-    document.onkeydown = function (event) {
-        if (event.keyCode == 27) {
-            modalWindow.classList.remove('active-modal');
-        }
-    } /*добовляем класс*/
+// open modal
+$(' .price__link--scout').click(function () {
+    $('.modal--scout').show();
+    $('.modal__inner').css('display', 'inline-block');
+});
+$('.price__link--leader').click(function () {
+    $('.modal--leader').show();
+    $('.modal__inner').css('display', 'inline-block');
+});
+$('.price__link--operator').click(function () {
+    $('.modal--operator').show();
+    $('.modal__inner').css('display', 'inline-block');
 });
 
-buttonModal2.addEventListener('click', () => {
-    modalWindow2.classList.add('active-modal');
-    document.onkeydown = function (event) {
-        if (event.keyCode == 27) {
-            modalWindow.classList.remove('active-modal');
-        }
-    }
-    /*добовляем класс*/
-});
-
-buttonModal3.addEventListener('click', () => {
-    modalWindow3.classList.add('active-modal');
-    document.onkeydown = function (event) {
-        if (event.keyCode == 27) {
-            modalWindow.classList.remove('active-modal');
-        }
-    }
-    /*добовляем класс*/
-});
-
-/*закрытие окна*/
-modalWindow.addEventListener('click', (e) => {
-    const isModal = e.target.closest('.modal__inner'); /*если клик в любое место кроме .modal__inner то окно закрывается */
-    if (!isModal) {
-        modalWindow.classList.remove('active-modal');
-    }
-    /*добовляем класс*/
-});
-
-modalWindow2.addEventListener('click', (e) => {
-    const isModal = e.target.closest('.modal__inner'); /*если клик в любое место кроме .modal__inner то окно закрывается */
-    if (!isModal) {
-        modalWindow2.classList.remove('active-modal');
-    }
-    /*добовляем класс*/
-});
-
-modalWindow3.addEventListener('click', (e) => {
-    const isModal = e.target.closest('.modal__inner'); /*если клик в любое место кроме .modal__inner то окно закрывается */
-    if (!isModal) {
-        modalWindow3.classList.remove('active-modal');
-    }
-    /*добовляем класс*/
+// close modal
+$('.modal').click(function () {
+    $(document).on('click', function (event) {
+        var select = $('.modal__inner');
+        if ($(event.target).closest(select).length)
+            return;
+        $('.modal, .modal__inner').hide();
+        $(document).unbind('click');
+        event.stopPropagation();
+    });
 });
 // ---------------------------------------------
 // скрипт который убирает полосу при скроле
