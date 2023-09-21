@@ -4,6 +4,36 @@
 @import 'global';
 @import 'libs';
 
+//  фокусы+
+// сайт укр
+// скролов нет
+// валидатор +
+// удалил пх у 0
+// < !-- ВАЖНОЕ ----------------------------
+//  
+//    проверить 2 блок
+
+//    
+//      ---------------------------- 
+//       проверить все своиства в ксс
+// ---
+//         2 блок плохо віглядит
+//          может совсем убрать картинку 
+//          или как то по другому
+// ---
+//           спорно 2 блок контент или нет 
+//            спорно титулы в модал должны быть h3 или h4 
+//            спорно prise скорей всего сделан не правильно с точки зрения js
+//             и копирования 100 раз модальніх окон
+//             
+//              ----------------------------------- 
+//  удалить все коментарии старые
+//              слишком большие отступы у секций отступы не адоп
+//              выполнинл удалить у нолей все px-->
+//              < !-- переименовать лого //лого переименовывать не надо -->
+// вроде подписал иконки иконки подписывать не надо
+//   поставить везде лин хейдж главный стоит 1
+
 .header {
     position: absolute;
     top: 0;
@@ -34,7 +64,7 @@
         @media (max-width: 992px) {
             transform: translateY(-200%);
             position: absolute;
-            top: 0px;
+            top: 0;
             left: 0;
             width: 100%;
             flex-direction: column;
@@ -60,7 +90,7 @@
             display: block;
 
             &:not(:last-child) {
-                margin: 0px 0px 20px 0px;
+                margin: 0 0 20px 0;
             }
         }
     }
@@ -71,7 +101,7 @@
     }
 
     &__link {
-        transition: color 0.5s;
+        transition: color .5s;
         outline-color: $black;
         outline-offset: 5px;
 
@@ -108,23 +138,22 @@
             padding: 0;
             z-index: 10;
 
-            span {
+            span,
+            &::before,
+            &::after {
                 height: 3px;
                 width: 100%;
                 background-color: $black;
+                transition: all .5s;
             }
 
             &::before,
             &::after {
                 position: absolute;
                 content: '';
-                height: 3px;
-                width: 100%;
-                background-color: $black;
             }
 
             &::before {
-                content: '';
                 top: 0;
             }
 
@@ -132,27 +161,27 @@
                 bottom: 0;
             }
         }
-    }
 
-    .menu__btn.menu__items--active span {
-        transform: scale(0);
-    }
+        &__btn.menu__items--active span {
+            transform: scale(0);
+        }
 
-    .menu__btn.menu__items--active:before {
-        transform: rotate(45deg);
-        top: 9px;
-    }
+        &__btn.menu__items--active:before {
+            transform: rotate(45deg);
+            top: 9px;
+        }
 
-    .menu__btn.menu__items--active::after {
-        transform: rotate(-45deg);
-        bottom: 10px;
+        &__btn.menu__items--active::after {
+            transform: rotate(-45deg);
+            bottom: 10px;
+        }
     }
 }
 
 .intro {
     height: 100vh;
     padding-top: 100px;
-    z-index: 999;
+    z-index: 100;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -202,10 +231,10 @@
         height: 100vh;
         display: flex;
         align-items: center;
-        background-image: url('../images/besocial_cat_4_2.svg');
+        background-image: url('../images/besocial_cat.svg');
         background-repeat: no-repeat;
         background-position: right center;
-        background-size: 559px 779px;
+        background-size: 560px 780px;
 
         @media (max-width: 1200px) {
             background-size: 50% 80%;
@@ -303,11 +332,11 @@
         object-fit: cover;
 
         @media (max-width: 1200px) {
-            margin: 0px 30px 30px 0px;
+            margin: 0 30px 30px 0;
         }
 
         @media (max-width: 768px) {
-            margin: 0px 20px 20px 0px;
+            margin: 0 20px 20px 0;
         }
 
         @media (max-width: 576px) {
@@ -479,51 +508,51 @@
 
         &--salary {
             &::before {
-                background-image: url('../images/terms/salary1.svg');
+                background-image: url('../images/terms/salary.svg');
             }
 
             &::after {
-                background-image: url('../images/terms/1b.svg');
+                background-image: url('../images/terms/decor1.svg');
             }
         }
 
         &--career {
             &::before {
-                background-image: url('../images/terms/career2.svg');
+                background-image: url('../images/terms/career.svg');
             }
 
             &::after {
-                background-image: url('../images/terms/b2.svg');
+                background-image: url('../images/terms/decor2.svg');
             }
         }
 
         &--freedom {
             &::before {
-                background-image: url('../images/terms/location3.svg');
+                background-image: url('../images/terms/location.svg');
             }
 
             &::after {
-                background-image: url('../images/terms/b3.svg');
+                background-image: url('../images/terms/decor3.svg');
             }
         }
 
         &--location {
             &::before {
-                background-image: url('../images/terms/freedom4.svg');
+                background-image: url('../images/terms/freedom.svg');
             }
 
             &::after {
-                background-image: url('../images/terms/b4.svg');
+                background-image: url('../images/terms/decor4.svg');
             }
         }
 
         &--english {
             &::before {
-                background-image: url('../images/terms/english5.svg');
+                background-image: url('../images/terms/english.svg');
             }
 
             &::after {
-                background-image: url('../images/terms/b5.svg');
+                background-image: url('../images/terms/decor5.svg');
             }
         }
     }
@@ -541,7 +570,7 @@
 
 .schedule {
     height: 100vh;
-    padding: 50px 0px;
+    padding: 50px 0;
     background-color: $silver;
     text-align: center;
     display: grid;
@@ -586,7 +615,7 @@
         }
 
         &:not(:last-child) {
-            margin-bottom: 40px; // !!!тут надо было как то по другому
+            margin-bottom: 40px;
 
             @media (max-width: 576px) {
                 margin-bottom: 20px;
@@ -673,22 +702,12 @@
 .price {
     min-height: 850px;
     height: 100vh;
-    padding: 50px 0px;
+    padding: 50px 0;
     display: grid;
     align-items: center;
 
     @media (max-width: 1200px) {
         height: 100%;
-    }
-
-    // @media (max-width: 992px) {
-    //     padding: 50px 0px 40px 0px;
-    //     margin-top: 80px;
-    // }
-
-    @media (max-width: 576px) {
-        // padding: 20px 0px;
-        // margin-top: 80px;
     }
 
     &__title {
@@ -703,7 +722,7 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 20px 20px;
+        gap: 20px;
 
         @media (max-width: 1200px) {
             justify-content: center;
@@ -755,9 +774,10 @@
         min-height: 680px;
         max-width: 360px;
         object-fit: cover;
+        vertical-align: middle;
 
         @media (max-width: 576px) {
-            max-width: 300px;
+            max-width: 290px;
         }
     }
 
@@ -769,7 +789,7 @@
         padding: 30px;
         display: flex;
         background-color: transparent;
-        transition: color 0.5s;
+        transition: color .5s;
         border: none;
         color: $white;
 
@@ -823,18 +843,7 @@
 
 .contacts {
     position: relative;
-    // padding: 50px 0;
-    // margin-top: 50px;
 
-    // @media (max-width: 992px) {
-    //     margin-top: 60px;
-    // }
-
-    // @media (max-width: 576px) {
-    //     margin-top: 80px;
-    // }
-
-    // !!!
     &::before {
         content: "";
         position: absolute;
@@ -867,10 +876,6 @@
         background-color: $silver;
         padding: 50px;
         width: 50%;
-
-        // @media (max-width: 992px) {
-        //     padding: 40px;
-        // }
 
         @media (max-width: 768px) {
             width: 100%;
@@ -908,7 +913,7 @@
         margin-bottom: 20px;
         background-color: transparent;
         outline: none;
-        padding: 20px 0px;
+        padding: 20px 0;
     }
 
     &__box {
@@ -917,7 +922,7 @@
         align-items: center;
     }
 
-    &__link {
+    &__btn {
         padding: 20px 50px;
         margin-bottom: 20px;
 
@@ -939,7 +944,7 @@
 
 .footer {
     background-color: $black2;
-    padding: 50px 50px 50px 0px;
+    padding: 50px 50px 50px 0;
     color: $white;
 
     @media (max-width: 992px) {
@@ -954,7 +959,7 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 20px 20px;
+        gap: 20px;
     }
 
     &__info {
@@ -965,7 +970,7 @@
 
     &__link {
         font-size: 18px;
-        transition: color 0.5s;
+        transition: color .5s;
 
         &:focus {
             color: $focus;
@@ -981,17 +986,29 @@
 
         &--telegram {
             position: relative;
+            height: 50px;
+            width: 50px;
+            display: block;
+            background-color: $yellow;
+            border-radius: 50%;
+            overflow: hidden;
 
             &::before {
                 content: "";
                 position: absolute;
-                left: 50%;
-                height: 50px;
-                width: 50px;
+                left: 48%;
+                top: 15%;
+                transform: translateX(-50%);
+                height: 32px;
+                width: 32px;
                 background-image: url('../images/icons/telegram.svg');
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
+            }
+
+            &:hover {
+                background-color: $hover2;
             }
         }
     }
@@ -1083,7 +1100,6 @@
     font-weight: 400;
     line-height: 1.5;
 
-
     &__btn {
         position: fixed;
         top: 10px;
@@ -1094,10 +1110,7 @@
         background-color: transparent;
         padding: 0;
         z-index: 10;
-
-        // @media (max-width: 768px) {
-        //     top: 20px;
-        // }
+        transition: color .5s;
 
         span {
             height: 3px;
@@ -1127,14 +1140,12 @@
             bottom: 10px;
         }
 
-        transition: color 0.5s;
-
         &:focus {
             color: $focus;
         }
 
         &:hover {
-            opacity: 0.5;
+            opacity: .5;
         }
 
         &:active {
@@ -1226,7 +1237,7 @@
 
     &__input {
         margin-bottom: 20px;
-        padding: 20px 0px;
+        padding: 20px 0;
         display: block;
         width: 100%;
         border-left: none;
@@ -1270,11 +1281,6 @@
     }
 }
 
-
-.active-modal {
-    display: flex;
-}
-
 .header-fixed {
     position: fixed;
     padding: 13px 0;
@@ -1282,17 +1288,15 @@
 
     .menu {
         padding-top: 0;
-    }
 
-    .menu__logo {
-        display: none;
-    }
+        &__logo {
+            display: none;
+        }
 
-    .menu__small {
-        display: block;
-        width: 150px;
-        height: 25px;
+        &__small {
+            display: block;
+            width: 150px;
+            height: 25px;
+        }
     }
 }
-
-@import 'media';

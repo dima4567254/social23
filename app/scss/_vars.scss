@@ -1,11 +1,7 @@
-/*$Butler: 'Butler',
-sans-serif;*/
-
 $focus: #14B4BE;
 $orange: #FF9900;
 $active: #fb0909;
 $ac: #fcd7b6;
-// $green: #14B4BE;
 $white: #FFFFFF;
 $black: #000000;
 $black2: #101820;
@@ -16,25 +12,8 @@ $violet:#481d77;
 $violet2:#41166e;
 $hover2:#ffd382;
 $hover: #ffb71b;
-// $red: #e72828;
-// $red1 :#fe3e57;
+$yellow: #ffb71b;
 $orange: #ffa500;
-
-/*$ac: #fcd7b6;
-
-/*accent*/
-
-
-// $default: #243f4d;
-
-// $Cream: #feefe2;
-// $Crayola: #c2d2db;
-
-
-
-
-
-
 
 @mixin line-clamp($line-clamp, ) {
   display: -webkit-box;
@@ -48,10 +27,6 @@ $orange: #ffa500;
 
   line-height: ($line-height / $font-size)
 }
-
-/*
-@include clamp(5);
-*/
 
 $browser-context: 16;
 

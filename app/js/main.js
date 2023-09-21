@@ -46,6 +46,52 @@ $('.modal').click(function () {
     });
 });
 // ---------------------------------------------
+
+// ---------------------------------------------
+// для плавного скрола
+$(".menu a").on("click", function (event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({ scrollTop: top }, 1500);
+});
+
+
+
+// // кнопка для адаптива
+
+// const header = document.querySelector('.header');
+// const first = document.querySelector('.first');
+// const headerHeight = header.offsetHeight;
+// const firstHeight = first.offsetHeight;
+// let lastScrollTop = 0;
+
+// window.addEventListener('scroll', () => {
+//     let scrollDistance = window.scrollY;
+
+//     // if (scrollDistance >= firstHeight + headerHeight) {
+//     // 	header.classList.add('header--fixed');
+//     // 	first.style.marginTop = `${headerHeight}px`;
+//     // } else {
+//     // 	header.classList.remove('header--fixed');
+//     // 	first.style.marginTop = null;
+//     // }
+
+//     if (scrollDistance > lastScrollTop) {
+//         header.classList.remove('header-fixed');
+//         first.style.marginTop = null;
+//     } else {
+//         header.classList.add('header-fixed');
+//         first.style.marginTop = `${headerHeight}px`;
+//     }
+
+//     if (scrollDistance === 0) {
+//         header.classList.remove('header-fixed');
+//         first.style.marginTop = null;
+//     }
+
+//     lastScrollTop = scrollDistance;
+// });
 // скрипт который убирает полосу при скроле
 $(function () {
     let header = $('.header');
@@ -58,15 +104,30 @@ $(function () {
         }
     });
 });
-// ---------------------------------------------
-// для плавного скрола
-$(".menu a").on("click", function (event) {
-    event.preventDefault();
-    var id = $(this).attr('href'),
-        top = $(id).offset().top;
-    $('body,html').animate({ scrollTop: top }, 1500);
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', function () {
+    const scrollY = window.scrollY;
+
+    if (scrollY >= header.offsetHeight) {
+        header.classList.add('header-fixed');
+    } else {
+        header.classList.remove('header-fixed');
+    }
 });
+// Функция для фиксированной шапки при скролле
+
+/** Функция для фиксированной шапки при скролле */
+// headerFixed()
+// let html = document.documentElement;
 
 
-
-// кнопка для адаптива
+// function headerFixed() {
+//     const headerStickyObserver = new IntersectionObserver(([entry]) => {
+//         html.classList.toggle('header-fixed', !entry.isIntersecting);
+//     });
+//     let firstScreen = document.querySelector('[data-observ]');
+//     if (firstScreen) {
+//         headerStickyObserver.observe(firstScreen);
+//     }
+// }
